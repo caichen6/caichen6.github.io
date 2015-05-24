@@ -1,0 +1,31 @@
+---
+layout: article
+title: About me
+date:   2015-05-20 15:18
+permalink: /about/
+---
+<!-- ######2015-05-10-关于我.md -->
+
+
+##关于我
+- 蔡晨 / longstreet
+- 中国科学技术大学软件学院（苏州） 软件工程
+- Java工程师，Python爱好者
+- 经验：
+    - 软件开发实习生 鼎晟网络科技公司 
+    - Java软件开发实习生 广州海格网通公司
+- 联系方式：longstreetcc@gmail.com
+
+##我的任务
+
+###Now
+- 百度程序设计大赛
+
+###Finish
+- 搭建好博客，配置好各种信息
+- 用语音控制电脑程序的开启、关闭
+
+---
+
+
+![Project Euler](https://projecteuler.net/profile/longstreet.png)

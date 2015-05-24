@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>java多线程面试题 • longstreet's blog</title>
+    <meta name="description" content="
+  摘要： 面试遇到的java多线程问题
+
+
+">
+    <meta name="keywords" content="">
+    
+    
+    	<!-- Twitter Cards -->
+	<meta name="twitter:title" content="java多线程面试题">
+	<meta name="twitter:description" content="
+  摘要： 面试遇到的java多线程问题
+
+
+">
+	
+	
+	
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:image" content="/images/logo.PNG# 120x120 px default image used for Twitter summary card">
+	
+	<!-- Open Graph -->
+	<meta property="og:locale" content="">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="java多线程面试题">
+	<meta property="og:description" content="
+  摘要： 面试遇到的java多线程问题
+
+
+">
+	<meta property="og:url" content="/tech/20141105">
+	<meta property="og:site_name" content="longstreet's blog">
+
+    <link rel="canonical" href="/tech/20141105">
+
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="longstreet's blog Atom Feed">
+    <link href="/sitemap.xml" type="application/xml" rel="sitemap" title="Sitemap">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="cleartype" content="on">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <!-- HTML5 Shiv and Media Query Support for IE -->
+    <!--[if lt IE 9]>
+      <script src="/js/vendor/html5shiv.min.js"></script>
+      <script src="/js/vendor/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <body id="js-body">
+    <!--[if lt IE 9]><div class="upgrade notice-warning"><strong>Your browser is quite old!</strong> Why not <a href="http://whatbrowser.org/">upgrade to a newer one</a> to better enjoy this site?</div><![endif]-->
+
+    <header id="masthead">
+  <div class="inner-wrap">
+    <a href="/" class="site-title">longstreet's blog</a>
+    <nav role="navigation" class="menu top-menu">
+        <ul class="menu-item">
+	<li class="home"><a href="/">longstreet's blog</a></li>
+	
+    
+        
+    
+    <li><a href="/" >Home</a></li>
+  
+    
+        
+    
+    <li><a href="/categories/tech/" >Tech</a></li>
+  
+    
+        
+    
+    <li><a href="/categories/project/" >Project</a></li>
+  
+    
+        
+    
+    <li><a href="/categories/book/" >Book</a></li>
+  
+    
+        
+    
+    <li><a href="/about/" >About</a></li>
+  
+</ul>
+    </nav>
+  </div><!-- /.inner-wrap -->
+</header><!-- /.masthead -->
+    <nav role="navigation" id="js-menu" class="sliding-menu-content">
+  <h5>longstreet's blog 
+  <!-- <span>Table of Contents</span></h5> -->
+  <ul class="menu-item">
+    <li>
+      <a href="/">
+        
+        <div class="title">Home</div>
+        
+      </a>
+    </li><li>
+      <a href="/categories/tech/">
+        
+        <div class="title">Tech</div>
+        
+      </a>
+    </li><li>
+      <a href="/categories/project/">
+        
+        <div class="title">Project</div>
+        
+      </a>
+    </li><li>
+      <a href="/categories/book/">
+        
+        <div class="title">Book</div>
+        
+      </a>
+    </li><li>
+      <a href="/about/">
+        
+        <div class="title">About</div>
+        
+      </a>
+    </li>
+  </ul>
+</nav>
+<button type="button" id="js-menu-trigger" class="sliding-menu-button lines-button x2" role="button" aria-label="Toggle Navigation">
+  <span class="nav-lines"></span>
+</button>
+
+<div id="js-menu-screen" class="menu-screen"></div>
+
+
+    <div id="page-wrapper">
+      <div id="main" role="main">
+	<article class="wrap" itemscope itemtype="http://schema.org/Article">
+		
+  <nav class="breadcrumbs">
+    <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+      <a href="/" itemprop="url">
+        <span itemprop="title">Home</span>
+      </a> › 
+    <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+      <a href="/categories/tech/" itemprop="url">
+        <span itemprop="title">Tech</span>
+      </a>
+    </span>
+  </nav><!-- /.breadcrumbs -->
+
+		<div class="page-title">
+			<h1>java多线程面试题</h1>
+		</div>
+		<div class="inner-wrap">
+			<div id="content" class="page-content" itemprop="articleBody">
+				<blockquote>
+  <p>摘要： 面试遇到的java多线程问题</p>
+</blockquote>
+
+<hr />
+
+<h3 id="threadlocal-">什么是 ThreadLocal 类，怎么使用它？</h3>
+
+<p>ThreadLocal 是一个线程级别的局部变量，并非“本地线程”。ThreadLocal 为每个使用该变量的线程提供了一个独立的变量副本，每个线程修改副本时不影响其它线程对象的副本(译者注)。</p>
+
+<ul>
+  <li>下面是线程局部变量(ThreadLocal variables)的关键点：
+    <ol>
+      <li>一个线程局部变量(ThreadLocal variables)为每个线程方便地提供了一个单独的变量。</li>
+      <li>ThreadLocal 实例通常作为静态的私有的(private static)字段出现在一个类中，这个类用来关联一个线程。</li>
+      <li>当多个线程访问 ThreadLocal 实例时，每个线程维护 ThreadLocal 提供的独立的变量副本。</li>
+      <li>常用的使用可在 DAO 模式中见到，当 DAO 类作为一个单例类时，数据库链接(connection)被每一个线程独立的维护，互不影响。(基于线程的单例)</li>
+    </ol>
+  </li>
+</ul>
+
+				<hr />
+				<footer class="page-footer">
+					
+
+
+<div class="author-image">
+	<img src="/images/bio-photo.jpg" alt="longstreet">
+</div><!-- ./author-image -->
+<div class="author-content">
+	<h3 class="author-name" >Written by <span itemprop="author">longstreet</span></h3>
+	<p class="author-bio"></p>
+</div><!-- ./author-content -->
+					<div class="inline-btn">
+	<a class="btn-social twitter" href="https://twitter.com/intent/tweet?text=java多线程面试题&amp;url=/tech/20141105&amp;via=" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i> Share on Twitter</a>
+	<a class="btn-social facebook" href="https://www.facebook.com/sharer/sharer.php?u=/tech/20141105" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i> Share on Facebook</a>
+	<a class="btn-social google-plus"  href="https://plus.google.com/share?url=/tech/20141105" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i> Share on Google+</a>
+</div><!-- /.share-this -->
+
+
+
+					<div class="page-meta">
+	<p>Updated <time datetime="2014-11-05T00:00:00Z" itemprop="datePublished">November 05, 2014</time></p>
+</div><!-- /.page-meta -->
+				</footer><!-- /.footer -->
+				<aside>
+					<hr />
+        <!-- 多说评论框 start -->
+        <div class="ds-thread" 
+             data-thread-key="20141105"  
+             data-title="java多线程面试题 " 
+             data-url="/tech/20141105 ">
+        </div>
+
+
+        <script type="text/javascript">
+        var duoshuoQuery = {short_name:"longstreetcc"};
+            (function() {
+                var ds = document.createElement('script');
+                ds.type = 'text/javascript';ds.async = true;
+                ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+                ds.charset = 'UTF-8';
+                (document.getElementsByTagName('head')[0] 
+                 || document.getElementsByTagName('body')[0]).appendChild(ds);
+            })();
+        </script>   
+        <!-- 多说公共JS代码 end -->
+				</aside>
+			</div><!-- /.content -->
+		</div><!-- /.inner-wrap -->
+		
+	</article><!-- ./wrap -->
+</div><!-- /#main -->
+
+      <footer role="contentinfo" id="site-footer">
+	<nav role="navigation" class="menu bottom-menu">
+		<ul class="menu-item">
+		
+      
+        
+      
+			<li><a href="/" >Home</a></li>
+		
+      
+        
+      
+			<li><a href="/categories/tech/" >Tech</a></li>
+		
+      
+        
+      
+			<li><a href="/categories/project/" >Project</a></li>
+		
+      
+        
+      
+			<li><a href="/categories/book/" >Book</a></li>
+		
+      
+        
+      
+			<li><a href="/about/" >About</a></li>
+		
+		</ul>
+	</nav><!-- /.bottom-menu -->
+	<p class="copyright">&#169; 2015 <a href="">longstreet's blog</a> powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> + <a href="http://mmistakes.github.io/skinny-bones-jekyll/" rel="nofollow">Skinny Bones</a>.</p>
+</footer>
+    </div>
+
+    <script src="/js/vendor/jquery-1.9.1.min.js"></script>
+    <script src="/js/main.js"></script>
+
+  </body>
+
+</html>

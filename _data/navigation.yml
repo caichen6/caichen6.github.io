@@ -1,0 +1,20 @@
+# Site navigation links
+- title: Home
+  url: /
+
+
+- title: Tech
+  url: /categories/tech/
+
+
+- title: Project
+  url: /categories/project/
+
+
+
+- title: Book
+  url: /categories/book/
+
+
+- title: About
+  url: /about/

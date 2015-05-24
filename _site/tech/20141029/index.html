@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>数据库事务四大特性 • longstreet's blog</title>
+    <meta name="description" content="
+  摘要： 数据库事务四大特性
+
+
+">
+    <meta name="keywords" content="">
+    
+    
+    	<!-- Twitter Cards -->
+	<meta name="twitter:title" content="数据库事务四大特性">
+	<meta name="twitter:description" content="
+  摘要： 数据库事务四大特性
+
+
+">
+	
+	
+	
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:image" content="/images/logo.PNG# 120x120 px default image used for Twitter summary card">
+	
+	<!-- Open Graph -->
+	<meta property="og:locale" content="">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="数据库事务四大特性">
+	<meta property="og:description" content="
+  摘要： 数据库事务四大特性
+
+
+">
+	<meta property="og:url" content="/tech/20141029">
+	<meta property="og:site_name" content="longstreet's blog">
+
+    <link rel="canonical" href="/tech/20141029">
+
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="longstreet's blog Atom Feed">
+    <link href="/sitemap.xml" type="application/xml" rel="sitemap" title="Sitemap">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="cleartype" content="on">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <!-- HTML5 Shiv and Media Query Support for IE -->
+    <!--[if lt IE 9]>
+      <script src="/js/vendor/html5shiv.min.js"></script>
+      <script src="/js/vendor/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <body id="js-body">
+    <!--[if lt IE 9]><div class="upgrade notice-warning"><strong>Your browser is quite old!</strong> Why not <a href="http://whatbrowser.org/">upgrade to a newer one</a> to better enjoy this site?</div><![endif]-->
+
+    <header id="masthead">
+  <div class="inner-wrap">
+    <a href="/" class="site-title">longstreet's blog</a>
+    <nav role="navigation" class="menu top-menu">
+        <ul class="menu-item">
+	<li class="home"><a href="/">longstreet's blog</a></li>
+	
+    
+        
+    
+    <li><a href="/" >Home</a></li>
+  
+    
+        
+    
+    <li><a href="/categories/tech/" >Tech</a></li>
+  
+    
+        
+    
+    <li><a href="/categories/project/" >Project</a></li>
+  
+    
+        
+    
+    <li><a href="/categories/book/" >Book</a></li>
+  
+    
+        
+    
+    <li><a href="/about/" >About</a></li>
+  
+</ul>
+    </nav>
+  </div><!-- /.inner-wrap -->
+</header><!-- /.masthead -->
+    <nav role="navigation" id="js-menu" class="sliding-menu-content">
+  <h5>longstreet's blog 
+  <!-- <span>Table of Contents</span></h5> -->
+  <ul class="menu-item">
+    <li>
+      <a href="/">
+        
+        <div class="title">Home</div>
+        
+      </a>
+    </li><li>
+      <a href="/categories/tech/">
+        
+        <div class="title">Tech</div>
+        
+      </a>
+    </li><li>
+      <a href="/categories/project/">
+        
+        <div class="title">Project</div>
+        
+      </a>
+    </li><li>
+      <a href="/categories/book/">
+        
+        <div class="title">Book</div>
+        
+      </a>
+    </li><li>
+      <a href="/about/">
+        
+        <div class="title">About</div>
+        
+      </a>
+    </li>
+  </ul>
+</nav>
+<button type="button" id="js-menu-trigger" class="sliding-menu-button lines-button x2" role="button" aria-label="Toggle Navigation">
+  <span class="nav-lines"></span>
+</button>
+
+<div id="js-menu-screen" class="menu-screen"></div>
+
+
+    <div id="page-wrapper">
+      <div id="main" role="main">
+	<article class="wrap" itemscope itemtype="http://schema.org/Article">
+		
+  <nav class="breadcrumbs">
+    <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+      <a href="/" itemprop="url">
+        <span itemprop="title">Home</span>
+      </a> › 
+    <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+      <a href="/categories/tech/" itemprop="url">
+        <span itemprop="title">Tech</span>
+      </a>
+    </span>
+  </nav><!-- /.breadcrumbs -->
+
+		<div class="page-title">
+			<h1>数据库事务四大特性</h1>
+		</div>
+		<div class="inner-wrap">
+			<div id="content" class="page-content" itemprop="articleBody">
+				<blockquote>
+  <p>摘要： 数据库事务四大特性</p>
+</blockquote>
+
+<hr />
+
+<h2 id="section">一、定义：</h2>
+<p>事务（transaction)，有一系列操作序列构成的执行单元，该单元要么都执行，要么都不执行，是个不可分割的单元。</p>
+
+<h2 id="section-1">二、事务的基本性质</h2>
+<p>事务有以下四个基本性质</p>
+
+<ul>
+  <li>
+    <p>原子性Atomicity
+  事务所包含的所有操作要么全部执行，要么全部不执行。</p>
+  </li>
+  <li>
+    <p>一致性Consistency
+  事务开始前和结束后，数据库一直处于一致性的状态。事务应该把数据库从一个一致性状态转换到另外一个一致性状态
+  如：转账事务前后，两账户下的金额之和不变。</p>
+  </li>
+  <li>
+    <p>隔离性Isolation
+  事务的隔离性要求系统必须保证事务不受其他并发执行事务的影响。即要求：任一对事务T1和T2，事务T1看来，T2要么在T1开始之前执行要么在T1完成之后才开始执行。这样每个事务都感觉不到系统中有并发事务执行。</p>
+  </li>
+  <li>
+    <p>持久性Durability
+  一个事务一旦成功完成，它对数据库的改变必须是永久的，即使是在系统遇到故障的情况下也不会丢失，数据的重要性决定了事物的持久性的重要。</p>
+  </li>
+</ul>
+
+				<hr />
+				<footer class="page-footer">
+					
+
+
+<div class="author-image">
+	<img src="/images/bio-photo.jpg" alt="longstreet">
+</div><!-- ./author-image -->
+<div class="author-content">
+	<h3 class="author-name" >Written by <span itemprop="author">longstreet</span></h3>
+	<p class="author-bio"></p>
+</div><!-- ./author-content -->
+					<div class="inline-btn">
+	<a class="btn-social twitter" href="https://twitter.com/intent/tweet?text=数据库事务四大特性&amp;url=/tech/20141029&amp;via=" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i> Share on Twitter</a>
+	<a class="btn-social facebook" href="https://www.facebook.com/sharer/sharer.php?u=/tech/20141029" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i> Share on Facebook</a>
+	<a class="btn-social google-plus"  href="https://plus.google.com/share?url=/tech/20141029" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i> Share on Google+</a>
+</div><!-- /.share-this -->
+
+
+
+					<div class="page-meta">
+	<p>Updated <time datetime="2014-10-29T00:00:00Z" itemprop="datePublished">October 29, 2014</time></p>
+</div><!-- /.page-meta -->
+				</footer><!-- /.footer -->
+				<aside>
+					<hr />
+        <!-- 多说评论框 start -->
+        <div class="ds-thread" 
+             data-thread-key="20141029"  
+             data-title="数据库事务四大特性 " 
+             data-url="/tech/20141029 ">
+        </div>
+
+
+        <script type="text/javascript">
+        var duoshuoQuery = {short_name:"longstreetcc"};
+            (function() {
+                var ds = document.createElement('script');
+                ds.type = 'text/javascript';ds.async = true;
+                ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+                ds.charset = 'UTF-8';
+                (document.getElementsByTagName('head')[0] 
+                 || document.getElementsByTagName('body')[0]).appendChild(ds);
+            })();
+        </script>   
+        <!-- 多说公共JS代码 end -->
+				</aside>
+			</div><!-- /.content -->
+		</div><!-- /.inner-wrap -->
+		
+	</article><!-- ./wrap -->
+</div><!-- /#main -->
+
+      <footer role="contentinfo" id="site-footer">
+	<nav role="navigation" class="menu bottom-menu">
+		<ul class="menu-item">
+		
+      
+        
+      
+			<li><a href="/" >Home</a></li>
+		
+      
+        
+      
+			<li><a href="/categories/tech/" >Tech</a></li>
+		
+      
+        
+      
+			<li><a href="/categories/project/" >Project</a></li>
+		
+      
+        
+      
+			<li><a href="/categories/book/" >Book</a></li>
+		
+      
+        
+      
+			<li><a href="/about/" >About</a></li>
+		
+		</ul>
+	</nav><!-- /.bottom-menu -->
+	<p class="copyright">&#169; 2015 <a href="">longstreet's blog</a> powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> + <a href="http://mmistakes.github.io/skinny-bones-jekyll/" rel="nofollow">Skinny Bones</a>.</p>
+</footer>
+    </div>
+
+    <script src="/js/vendor/jquery-1.9.1.min.js"></script>
+    <script src="/js/main.js"></script>
+
+  </body>
+
+</html>

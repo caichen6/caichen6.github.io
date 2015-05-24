@@ -1,0 +1,931 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title>longstreet's blog</title>
+  <generator uri="https://github.com/jekyll/jekyll">Jekyll v2.4.0</generator>
+    <icon>/images/apple-touch-icon-precomposed.png</icon>
+  <subtitle></subtitle>
+  <link href="/atom.xml" rel="self"/>
+  <link href="/" rel="alternate" type="text/html"/>
+  <updated>2015-05-24T15:46:02+08:00</updated>
+  <id>/</id>
+  <author>
+    <name>longstreet</name>
+    <uri>/</uri>
+    <email>1055820594@qq.com</email>
+  </author>
+
+  
+  <entry>
+    <title>微言</title>
+    <link href="/tech/20150523"/>
+    <updated>2015-05-23T17:17:00+08:00</updated>
+    <id>/tech/微言</id>
+    <author>
+      <name>longstreet</name>
+      <uri>/</uri>
+      <email>1055820594@qq.com</email>
+    </author>
+    <content type="html">
+      
+      &lt;blockquote&gt;
+  &lt;p&gt;摘要： 说过的，和听过的，简单几句。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;态度&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;阅读时，请在脑海里理清逻辑顺序，这样才能理解吸收。&lt;/li&gt;
+  &lt;li&gt;保持强烈的求知欲和严谨的学习态度。&lt;/li&gt;
+  &lt;li&gt;学习不进则退，多看书学习，多写博复习。&lt;/li&gt;
+  &lt;li&gt;人一生时间短暂，请将事一件件的做好。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;技术&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;一个团队最牛逼的人是精通&lt;strong&gt;数据库&lt;/strong&gt;的人&lt;/li&gt;
+  &lt;li&gt;刷题系统：
+    &lt;ul&gt;
+      &lt;li&gt;学语言刷&lt;a href=&quot;https://projecteuler.net/&quot;&gt;Project Euler&lt;/a&gt;，&lt;/li&gt;
+      &lt;li&gt;面试或者学习刷&lt;a href=&quot;https://leetcode.com/&quot;&gt;leetcode&lt;/a&gt;和&lt;a href=&quot;http://www.topcoder.com/&quot;&gt;topcoder&lt;/a&gt;、 &lt;a href=&quot;http://codeforces.com/&quot;&gt;codeforces&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+    </content>
+  </entry>
+  
+  <entry>
+    <title>Mac开发环境搭建</title>
+    <link href="/project/20150519"/>
+    <updated>2015-05-19T00:00:00+08:00</updated>
+    <id>/project/Mac开发环境搭建</id>
+    <author>
+      <name>longstreet</name>
+      <uri>/</uri>
+      <email>1055820594@qq.com</email>
+    </author>
+    <content type="html">
+      
+      &lt;blockquote&gt;
+  &lt;p&gt;摘要： Mac上如何搭建好Python和Java的开发环境。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;正如About me中介绍，我是个Java工程师、Python爱好者。其中隐藏着我靠Java吃饭，但业余喜欢写Python程序。Java在大项目中优势不用我解释，Python在实现想法时显得轻而易举。所以我以这两个语言开发为主。所以得手Mac之后，就是配它们的环境了。&lt;/p&gt;
+
+&lt;h2 id=&quot;java&quot;&gt;一、Java开发环境&lt;/h2&gt;
+
+&lt;h3 id=&quot;section&quot;&gt;所需软件&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;软件简称&lt;/th&gt;
+      &lt;th&gt;用途&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;JDK 6&lt;/td&gt;
+      &lt;td&gt;Eclipse安装所必需的jdk版本，苹果公司提供，打开eclipse时会提示&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Eclipse Luna&lt;/td&gt;
+      &lt;td&gt;Java程序开发的主要软件&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;JDK 7+&lt;/td&gt;
+      &lt;td&gt;Java程序开发的版本，需要配置&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;好像没什么可以配的。&lt;/p&gt;
+
+&lt;h2 id=&quot;python&quot;&gt;二、Python开发环境&lt;/h2&gt;
+
+&lt;p&gt;python 开发环境有很多种，最基础的莫过于vim+cmd，但是切换来切换去很麻烦，还得输入命令。
+本文将介绍三种搭建方式：一种是Eclipse＋PyDev，另一种是直接使用PyCharm CE，最后一种是Sublime Text 3通过配置搭建。其中Pycharm的设置方式和eclipse+pydev几乎一致，就不介绍，不过它确实比较好用。&lt;/p&gt;
+
+&lt;h3 id=&quot;python-1&quot;&gt;1、Python虚拟环境搭建&lt;/h3&gt;
+&lt;p&gt;首先要介搭建python环境。由于Mac自带了Python，系统有时候需要使用Python，如果开发环境和系统环境相同，系统容易受影响。当然这个是网上的前辈告诉我的，所以还是选择虚拟环境，与系统的环境隔离。其实强迫症也有这个要求[笑哭]。&lt;/p&gt;
+
+&lt;h4 id=&quot;section-1&quot;&gt;1.1 软件介绍&lt;/h4&gt;
+&lt;p&gt;virtualenv用于创建独立的Python环境，多个Python相互独立，互不影响，它能够：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;在没有权限的情况下安装新套件&lt;/li&gt;
+  &lt;li&gt;不同应用可以使用不同的套件版本&lt;/li&gt;
+  &lt;li&gt;套件升级不影响其他应用&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Virtaulenvwrapper是virtualenv的扩展包，用于更方便管理虚拟环境，它可以做：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;将所有虚拟环境整合在一个目录下&lt;/li&gt;
+  &lt;li&gt;管理（新增，删除，复制）虚拟环境&lt;/li&gt;
+  &lt;li&gt;切换虚拟环境&lt;/li&gt;
+  &lt;li&gt;…&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;virtualenvvirtualenvwrapper&quot;&gt;1.2 安装virtualenv和VirtualenvWrapper&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo easy_install virtualenv
+sudo easy_install virtualenvwrapper 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;如果没有启动虚拟环境，系统也安装了pip工具，那么套件将被安装在系统环境中，为了避免发生此事，可以在~/.bashrc文件中加上：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#在virtualenv下才可使用pip
+export PIP_REQUIRE_VIRTUALENV=true
+#或者让在执行pip的时候让系统自动开启虚拟环境：
+export PIP_RESPECT_VIRTUALENV=true
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;此时还不能使用virtualenvwrapper，默认virtualenvwrapper安装在/usr/local/bin下面，实际上你需要运行virtualenvwrapper.sh文件才行，先别急，打开这个文件看看,里面有安装步骤，我们照着操作把环境设置好。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#创建目录用来存放虚拟环境
+mkdir $HOME/.virtualenvs 在~/.bashrc中添加行： 
+
+export WORKON_HOME=$HOME/.virtualenvs
+source /usr/local/bin/virtualenvwrapper.sh
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;运行： &lt;code&gt;source ~/.bashrc&lt;/code&gt;&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;命令&lt;/th&gt;
+      &lt;th&gt;介绍&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;workon&lt;/td&gt;
+      &lt;td&gt;列出虚拟环境列表&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;lsvirtualenv&lt;/td&gt;
+      &lt;td&gt;列出虚拟环境列表&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;mkvirtualenv [虚拟环境名称]&lt;/td&gt;
+      &lt;td&gt;新建虚拟环境&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;workon [虚拟环境名称]&lt;/td&gt;
+      &lt;td&gt;启动/切换虚拟环境&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;rmvirtualenv [虚拟环境名称]&lt;/td&gt;
+      &lt;td&gt;删除虚拟环境&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;deactivate&lt;/td&gt;
+      &lt;td&gt;离开虚拟环境&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;到这里，python虚拟环境算是搭建好了。&lt;/p&gt;
+
+&lt;h3 id=&quot;eclipse--pydev&quot;&gt;2、Eclipse + PyDev&lt;/h3&gt;
+
+&lt;p&gt;上面虚拟环境搭建好之后，后面的三种开发环境就可以使用这个虚拟环境了。&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;软件简称&lt;/th&gt;
+      &lt;th&gt;用途&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Eclipse&lt;/td&gt;
+      &lt;td&gt;python也可以用&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;PyDev&lt;/td&gt;
+      &lt;td&gt;需要这个才可以开发python程序&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;JDK 7+&lt;/td&gt;
+      &lt;td&gt;PyDev需要这个版本的jdk才可以使用&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Virtualenv&lt;/td&gt;
+      &lt;td&gt;将开发环境和系统自带python隔离&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&quot;pydev&quot;&gt;2.1 安装PyDev&lt;/h4&gt;
+
+&lt;p&gt;打开Eclipse软件。Help-&amp;gt;Install New Software-&amp;gt;Add按钮，输入以下内容&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Name：PyDev（这个随便起），
+Location：http://pydev.sf.net/updates/（PyDev的更新地址）
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;OK-&amp;gt;选择PyDev下的PyDev for Eclipse-&amp;gt;next-&amp;gt;install&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;注意：由于pydev插件需要jdk 7+ 支持，所以需要给系统安装jdk7+的软件支持。 安装好PyDev插件后，重启eclipse，就可以了。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;pydev-1&quot;&gt;2.2 配置PyDev&lt;/h4&gt;
+
+&lt;p&gt;在Preference-&amp;gt;PyDev-&amp;gt;Interpreter - Python，点击Quick AutoConfig，就可以导入系统的python解释器的配置。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;针对“运行正常，编辑器编译错误”的情况，在perference-&amp;gt;pydev-&amp;gt;editor&amp;gt;code analysis-&amp;gt;imports-&amp;gt;ignore来设置&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;python-2&quot;&gt;2.3 使用python虚拟环境&lt;/h4&gt;
+
+&lt;p&gt;首先创建虚拟环境	&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;mkvirtualenv EclipseENV
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;再在eclipse的pydev设置里面添加python的虚拟运行环境。Preference-&amp;gt;PyDev-&amp;gt;Interpreter - Python里面选择new，&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;name：EclipseENV
+executable：$HOME/.virtualenvs/.virtualenvs/EclipseENV/bin／python
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;并选择默认的已勾上的添加的系统python环境，就可以了。&lt;/p&gt;
+
+&lt;p&gt;新建project时，记得选择interpreter为EclipseENV，就会使用该python环境。&lt;/p&gt;
+
+&lt;h3 id=&quot;sublime-text--virtualenv&quot;&gt;3、sublime text + virtualenv&lt;/h3&gt;
+
+&lt;p&gt;virtualenv 等安装方法和上面的步骤一样，这里讲的是sublime text的配置方法。&lt;/p&gt;
+
+&lt;p&gt;首先使用sublime创建project。新建工作文件夹project，使用sublime打开project文件夹，并在project-&amp;gt;save project as -&amp;gt;保存到工作文件夹，命名为projectname.sublime-project文件。
+打开projectname.sublime-project，修改project配置文件，输入内容如下&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+    &quot;folders&quot;:
+    [
+        {
+            &quot;follow_symlinks&quot;: true,
+            &quot;path&quot;: &quot;.&quot;
+        }
+    ],
+    &quot;build_systems&quot;:
+    [
+        {
+            &quot;selector&quot;: &quot;source.python&quot;,
+            &quot;name&quot;: &quot;Run virtualenv python&quot;,
+            //for windows
+            &quot;path&quot;:&quot;C://Users//user//.virtualenvs//Scripts;%PATH%&quot;,
+            &quot;cmd&quot;: [&quot;python.exe&quot;, &quot;-u&quot;, &quot;$file&quot;],
+            // For Mac OS X and Linux and Unix
+            //&quot;path&quot;:&quot;/Users/user/work/myvirtualenv/bin:$PATH&quot;,            
+            //&quot;cmd&quot;: [&quot;python&quot;, &quot;-u&quot;, &quot;$file&quot;],
+            &quot;file_regex&quot;: &quot;^[ ]*File \&quot;(...*?)\&quot;, line ([0-9]*)&quot;
+        }
+    ]
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;保存后就可以在python可执行文件下ctrl+B&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;参考资料：http://blog.bbzhh.com/index.php/archives/19.html&lt;/p&gt;
+&lt;/blockquote&gt;
+
+
+    </content>
+  </entry>
+  
+  <entry>
+    <title>Mac软件推荐</title>
+    <link href="/project/20150518"/>
+    <updated>2015-05-18T00:00:00+08:00</updated>
+    <id>/project/Mac软件推荐</id>
+    <author>
+      <name>longstreet</name>
+      <uri>/</uri>
+      <email>1055820594@qq.com</email>
+    </author>
+    <content type="html">
+      
+      &lt;blockquote&gt;
+  &lt;p&gt;摘要： Mac好用的软件介绍&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;题目和摘要都说软件推荐啦，确实因为有些软件不可或缺，有的甚至没有不行。有的强烈推荐。其实有另外一个事实被掩盖了。
+本人手很贱，且强迫症严重，每天都在折腾。因此纪录下平常使用频繁的软件，以便某次头脑发热将电脑给格式化了。[笑哭]不要告诉大家，我把真相藏在文字里面了。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Github&lt;/li&gt;
+  &lt;li&gt;Sublime Text 3&lt;/li&gt;
+  &lt;li&gt;Eclipse&lt;/li&gt;
+  &lt;li&gt;PyCharm CE&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Todoist&lt;/strong&gt; [待办事件，灵感策划]&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Pomotodo&lt;/strong&gt; [提高效率，健康提醒]&lt;/li&gt;
+  &lt;li&gt;Pocket [跨平台阅读]&lt;/li&gt;
+  &lt;li&gt;Reeder [阅读]&lt;/li&gt;
+  &lt;li&gt;Alfred 2 [破解吧]&lt;/li&gt;
+  &lt;li&gt;Snap [没有鼠标的日子，你是我媳妇]&lt;/li&gt;
+  &lt;li&gt;Caffeine [睡眠挺好，待机也不可少]&lt;/li&gt;
+  &lt;li&gt;爱壁纸HD [桌面很酷很重要]&lt;/li&gt;
+  &lt;li&gt;Diumoo [比atpill好用，因为可以使用键盘上的播放暂停按钮]&lt;/li&gt;
+  &lt;li&gt;Chome [还是替代了safari吧]&lt;/li&gt;
+  &lt;li&gt;Thunder&lt;/li&gt;
+  &lt;li&gt;Xcode [不学习苹果开发的还是不要装了，没用]&lt;/li&gt;
+  &lt;li&gt;Spectacle 调节窗口大小&lt;/li&gt;
+  &lt;li&gt;CheetSheet 长按command键查看快捷方式&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;VMware Fusion [破解吧，装个windows,linux,mac os]&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Homebrew&lt;/li&gt;
+  &lt;li&gt;Microsoft Office［备注：不到不得以不要装，很大，能在虚拟机中搞定就在虚拟机里面搞定吧］&lt;/li&gt;
+  &lt;li&gt;Mou&lt;/li&gt;
+  &lt;li&gt;MindupFree&lt;/li&gt;
+  &lt;li&gt;The unarchever&lt;/li&gt;
+  &lt;li&gt;iTerm&lt;/li&gt;
+  &lt;li&gt;Beyond Compare&lt;/li&gt;
+  &lt;li&gt;QQ&lt;/li&gt;
+  &lt;li&gt;Wechat&lt;/li&gt;
+  &lt;li&gt;Evernote&lt;/li&gt;
+  &lt;li&gt;Dash&lt;/li&gt;
+  &lt;li&gt;Parallels Desktop&lt;/li&gt;
+  &lt;li&gt;VirtualBox&lt;/li&gt;
+&lt;/ul&gt;
+
+
+    </content>
+  </entry>
+  
+  <entry>
+    <title>为何你睡了11个小时仍然觉得累</title>
+    <link href="/opinion/20150501"/>
+    <updated>2015-05-01T00:00:00+08:00</updated>
+    <id>/opinion/为何你睡了11个小时仍然觉得累</id>
+    <author>
+      <name>longstreet</name>
+      <uri>/</uri>
+      <email>1055820594@qq.com</email>
+    </author>
+    <content type="html">
+      
+      &lt;blockquote&gt;
+  &lt;p&gt;摘要： 休息不只是睡觉那么简单。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;为什么你那么累，你真的休息好了吗？ &lt;/p&gt;
+
+&lt;h1 id=&quot;section&quot;&gt;前言&lt;/h1&gt;
+
+&lt;p&gt;　　什么叫做休息？好好休息个周末？好好出去旅游一下？但事实上，往往越休息越感觉累。为什么呢？&lt;/p&gt;
+
+&lt;p&gt;　　为什么你睡了11个小时仍然觉得疲累？为什么你花了好几万去岛国度假并没有增加生活的热情？&lt;/p&gt;
+
+&lt;p&gt;　　都说要去KTV，去夜店，去游乐园就能忘掉不快，更带劲地开始新的一天，但是尽兴归来心里只剩空虚？&lt;/p&gt;
+
+&lt;p&gt;　　我们真的明白休息的含义吗？我们休息对了吗？你理解的休息是什么？一个饱觉？一阵疯玩？到KTV释放饭后的一串饱嗝？&lt;/p&gt;
+
+&lt;p&gt;　　休息的真正含义是什么？是恢复疲劳，放松神经，当你重新投入工作与学习的时候觉得又是一个精力充沛的新人。&lt;/p&gt;
+
+&lt;p&gt;　　如果你的休息方式并不能为你带来这些，那么，无论这些活动的名字听起来有多轻松，看上去有多High，它都是一种错误。&lt;/p&gt;
+
+&lt;p&gt;　　抛弃它们，来一场休息革命！&lt;/p&gt;
+
+&lt;h1 id=&quot;section-1&quot;&gt;对休息对误解&lt;/h1&gt;
+
+&lt;p&gt;　　首先，来看看我们对休息有哪些误解：&lt;/p&gt;
+
+&lt;h2 id=&quot;section-2&quot;&gt;一、脑力劳动者，补瞌睡对你没什么用&lt;/h2&gt;
+
+&lt;p&gt;　　你写了一天的文案，主持了一天的会议，当一切都结束了，你叹到：太累了，这一天我要睡个好觉。我们的常识使得我们对疲劳的第一反应就是“去躺躺吧”。但这是一个陷阱。&lt;/p&gt;
+
+&lt;p&gt;　　睡眠的确是一种有效的休息方式，但它主要对睡眠不足或体力劳动者适用。对体力劳动者来说，“疲劳”主要是由体内产生大量酸性物质引起，如果十分疲劳，应采取静的休息方式。通过睡觉，可以把失去的能量补充回来，把堆积的废物排除出去。如果不是很累，也可以在床上先躺一躺，闭目静息，让全身肌肉和神经完全放松后，再起来活动活动。&lt;/p&gt;
+
+&lt;p&gt;　　但如果你是坐办公室的，大脑皮层极度兴奋，而身体却处于低兴奋状态，对待这种疲劳，睡眠能起到的作用不大，（除非你是熬夜加班，连正常睡眠时间都达不到）因为你需要的不是通过“静止”恢复体能，而是要找个事儿把神经放松下来。这样你可以理解为什么你周末两天不出门依旧无精打采，而只需下班后游泳半小时就神采奕奕。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-3&quot;&gt;二、不必停下来，只是换一下&lt;/h2&gt;
+
+&lt;p&gt;　　既然睡觉不能帮助我们休息大脑，那什么办法才可以？答案是不停止活动，而只是改变活动的内容。大脑皮质的一百多亿神经细胞，功能都不一样，它们以不同的方式排列组合成各不相同的联合功能区，这一区域活动，另一区域就休息。&lt;/p&gt;
+
+&lt;p&gt;　　所以，通过改换活动内容，就能使大脑的不同区域得到休息。心理生理学家谢切诺夫做过一个实验，为了消除右手的疲劳，他采取两种方式——一种是让两只手静止休息，另一种是在右手静止的同时又让左手适当活动，然后在疲劳测量器上对右手的握力进行测试。结果表明，在左手活动的情况下，右手的疲劳消除得更快。这证明变换人的活动内容确实是积极的休息方式。&lt;/p&gt;
+
+&lt;p&gt;　　比如你星期五写了5个小时的企划案，最好第二天去给你的盆栽们剪枝而不是睡到太阳晒屁股。还有一点，当你无法选择由脑力劳动转入体力劳动时，你不妨在脑力劳动内部转换。&lt;/p&gt;
+
+&lt;p&gt;　　法国杰出的启蒙思想家卢梭就讲过他的心得：“我本不是一个生来适于研究学问的人，因为我用功的时间稍长一些就感到疲倦，甚至我不能一连半小时集中精力于一个问题上。但是，我连续研究几个不同的问题，即使是不间断，我也能够轻松愉快地一个一个地寻思下去，这一个问题可以消除另一个问题所带来的疲劳，用不着休息一下脑筋。于是，我就在我的治学中充分利用我所发现的这一特点，对一些问题交替进行研究。这样，即使我整天用功也不觉得疲倦了。”所以，如果你有好几个问题要处理，最好交替进行，而不要处理完一个再开始第二个，那样会很快被耗尽。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-4&quot;&gt;三、最好的休息，是让你重燃生活的热情&lt;/h2&gt;
+
+&lt;p&gt;　　我们的疲惫主要来自对现有的一成不变的生活的厌倦。所以最好的休息项目就是那些让我们重新找到生活和工作热情的活动。如果你干完一件事，能够幸福地感叹“明天又是新的一天。”那这件事对你来说就是最好的恢复热情，调节情绪的方法。但可惜，我们缺乏对“休息”的想象力。我们能想出来的休息方法不是痴睡就是傻玩。&lt;/p&gt;
+
+&lt;p&gt;　　我们给你开了下面一些活动清单，基本思路是以“做”来解决“累”，用积极休息取代消极放纵。当然，最适合你的方法还是要你自己探索。事实上如果你觉得打扫卫生比坐过山车是更好的放松，那么就去吧，别管世界上的其它人都在玩什么。&lt;/p&gt;
+
+&lt;p&gt;也许你可以：&lt;/p&gt;
+
+&lt;p&gt;1、看书&lt;/p&gt;
+
+&lt;p&gt;　　用看两小时让你开怀的漫画或小说代替去KTV唱那些一成不变的口水歌。&lt;/p&gt;
+
+&lt;p&gt;2、早睡早起&lt;/p&gt;
+
+&lt;p&gt;　　试着放弃在周六晚上去酒吧，10点入睡，然后在7点起床，去没有人的街上走走，或是看看你从来没有机会看到的早间剧场，你会发现这一天可以和过去的千百个周末都不相同。&lt;br /&gt;
+3、逛街&lt;/p&gt;
+
+&lt;p&gt;　　不要再去你已经去过无数次的度假村找乐子了。找一条你从没去过的街道，把它走完。你会发现这个你感到腻味的城市，结果你确并没有完全体会到它的妙处。&lt;/p&gt;
+
+&lt;p&gt;4、换个地方消遣&lt;/p&gt;
+
+&lt;p&gt;　　旅行，而不是换个地方消遣。去一个地方对那个地方本身心存好奇，对自己这趟行程心存美意，感受自己经验范围以外的人生样貌。而不是坐了5小时飞机，只是换个地方打麻将，换个地方游泳，换个地方打球……&lt;/p&gt;
+
+&lt;p&gt;5、学习新技艺&lt;/p&gt;
+
+&lt;p&gt;　　从这个周末起学习一项新的技艺，比如弹电子琴，打鼓……每周末练习1小时以上。&lt;/p&gt;
+
+&lt;p&gt;6、去社交&lt;/p&gt;
+
+&lt;p&gt;　　不要以为它总是令人疲惫的。虽然和看书比起来，它稍有点令人紧张，但也能让你更兴奋，更有认同感。你必须每周有两三天是和工作圈子和亲戚外的人打交道。它让你在朝九晚五的机械运行中不至失去活泼的天性。女性朋友们尤为需要走出去和朋友聚会，这些时刻你不再是满脸写着“效率”的中性人，而是一个裙裾飞扬的魅力焦点。&lt;/p&gt;
+
+&lt;p&gt;7、做点困难的事&lt;/p&gt;
+
+&lt;p&gt;　　如果你是精神超级紧张的人。心理学家发现解除神经紧张的方法，是去处理需要神经紧张才能解决的问题。曾经一位精神即将崩溃的总经理找到一位医师给出治疗建议，结果他得到的处方是去动物园当驯狮师。一个月以后完全康复。所以压力特别大的时候你可以为自己再找份工作，但不要是和你职业类似的。比如去孤儿院做义工，或者去一个复杂的机械工厂从学徒干起，或者做一道超级复杂的数学题。&lt;br /&gt;
+　　往往珍惜生命的人，会不顾任何代价，去求得一个休息。休息十天、半个月，他们回来了。再看呀，是多么神奇的一种变化！他们简直是一个新生的人了。生机勃勃，精神饱满，怀着新的希望，新的计划，新的生命憧憬，他们己消除疲劳，获得了从新起航的动力——燃料。&lt;/p&gt;
+
+&lt;p&gt;　　花些时间休息，可以使你获得大量的精力、体力，使你取得从事任何工作，应付各种问题的力量，使你对于生命，能有一个愉快正确的认识，天下还能有其它时间的投资对于你更加有利吗？&lt;/p&gt;
+
+&lt;p&gt;　　当听到有人说，他工作太忙，没有时间去休息，觉得这个人有些反常。或是他的能力不够应付他的业务，他的工作缺乏系统性；或是他不善于支配他的员工，以致自己离开时事业就无法运行；或是他生性就太吝啬，没有部下或团队。连上厕所的时间都不肯牺牲。当然，假如他工作没有计划、没有系统，本人一离开岗位，一切事务就要无法运行的话，他自然不能休息了。但是假如他是一个有组织协调能力的人，假如他的工作有系统、有计划，适度休息，这正是业务中的有利投资，因为休息回来，他的精力会更加集中、精神会更加饱满。由此他的生命会延续的更长。人生的价值才能得到更加充分的体现与发挥。每一个人都应该抛弃只顾工作不顾休息的念头。那种“生命不止，奋斗不休”的观念是错误的，应立刻从脑海中消除掉。否则，你还没有走完你应走完的生命旅程你就长眠于地下了。到那时你的理想、前途、事业不就都成了泡影了吗？因此舍不得时间休息的人，绝对不是一个聪明人。&lt;/p&gt;
+
+&lt;p&gt;　　从人性的立场上来说，休息一事，利大于弊。古语说得好：“在患病的时候，任何人都是坏人。”即使是心底最善良的人，在身体疲惫不堪、神精衰弱的时候，也会变得不通情理、脾气暴噪。&lt;/p&gt;
+
+&lt;p&gt;　　因此，当需要休息的候，你应该休息。不然的话，你的行为正如列宁所指出的那样：“不会休息就不会工作。”&lt;/p&gt;
+
+    </content>
+  </entry>
+  
+  <entry>
+    <title>怎么让WordPress的首页最新文章为摘要而不是全文</title>
+    <link href="/tech/20150424"/>
+    <updated>2015-04-24T00:00:00+08:00</updated>
+    <id>/tech/怎么让WordPress的首页最新文章为摘要而不是全文</id>
+    <author>
+      <name>longstreet</name>
+      <uri>/</uri>
+      <email>1055820594@qq.com</email>
+    </author>
+    <content type="html">
+      
+      &lt;blockquote&gt;
+  &lt;p&gt;摘要： 解决使用wordpress的主题时首页全文显示的问题&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;背景：&lt;/h2&gt;
+
+&lt;p&gt;出现的问题：由于文章太长，将全文摆放在首页难看且浪费网络资源，查询百度后，发现有以下解决方案。该方案是针对WordPress的Twenty Twelve主题进行的修改，其他主题都类似修改.&lt;/p&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;哪里编辑&lt;/h2&gt;
+&lt;p&gt;WordPress准许用户在&lt;code&gt;外观-&amp;gt;编辑&lt;/code&gt;中修改本WordPress使用的主题。打开&lt;code&gt;控制台-&amp;gt;外观-&amp;gt;编辑-&amp;gt;index.php&lt;/code&gt;可以看到以下代码&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    &amp;lt;?php /* Start the Loop */ ?&amp;gt;
+    &amp;lt;?php while ( have_posts() ) : the_post(); ?&amp;gt;
+        &amp;lt;?php get_template_part( &#39;content&#39;, get_post_format() ); ?&amp;gt;
+    &amp;lt;?php endwhile; ?&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这段代码的意思是在首页index.php页面将文章呈现出来，使用content.php 模板显示这些内容。因此打开&lt;code&gt;content.php&lt;/code&gt;的编辑页面，找到下面的代码&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    &amp;lt;div class=&quot;entry-content&quot;&amp;gt;
+        &amp;lt;?php the_content( __( &#39;Continue reading &amp;lt;span class=&quot;meta-nav&quot;&amp;gt;&amp;amp;rarr;&amp;lt;/span&amp;gt;&#39;, &#39;twentytwelve&#39; ) ); ?&amp;gt;
+        &amp;lt;?php wp_link_pages( array( &#39;before&#39; =&amp;gt; &#39;&amp;lt;div class=&quot;page-links&quot;&amp;gt;&#39; . __( &#39;Pages:&#39;, &#39;twentytwelve&#39; ), &#39;after&#39; =&amp;gt; &#39;&amp;lt;/div&amp;gt;&#39; ) ); ?&amp;gt;
+    &amp;lt;/div&amp;gt;&amp;lt;!-- .entry-content --&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;section-2&quot;&gt;如何修改&lt;/h2&gt;
+
+&lt;p&gt;将Continue reading这一段给注释掉，替代成下面的代码&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    &amp;lt;?php if(!is_single()) {
+        the_excerpt();
+    } else {
+        the_content(__(&#39;(more…)&#39;));
+    } ?&amp;gt;   
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;保存之后，打开首页就可以只看摘要了。&lt;/p&gt;
+
+
+    </content>
+  </entry>
+  
+  <entry>
+    <title>《算法导论》重要的算法</title>
+    <link href="/book/20141116"/>
+    <updated>2014-11-16T00:00:00+08:00</updated>
+    <id>/book/《算法导论》重要的算法</id>
+    <author>
+      <name>longstreet</name>
+      <uri>/</uri>
+      <email>1055820594@qq.com</email>
+    </author>
+    <content type="html">
+      
+      &lt;blockquote&gt;
+  &lt;p&gt;摘要： 《算法导论》的简略版读书笔记。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;分治法  &lt;/li&gt;
+  &lt;li&gt;插入排序（前面有序，后面无序，后面元素往前面插入）&lt;/li&gt;
+  &lt;li&gt;归并排序 (主要是归并过程)&lt;/li&gt;
+  &lt;li&gt;快速排序 (主要是分堆函数，前边数小于它，后边数要大于它)&lt;/li&gt;
+  &lt;li&gt;红黑树&lt;br /&gt;
+    &lt;ul&gt;
+      &lt;li&gt;旋转操作 &lt;/li&gt;
+      &lt;li&gt;插入查找删除&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;扩充数据结构&lt;/li&gt;
+  &lt;li&gt;动态规划 （装配线，矩阵链乘法，最长公共子序列）&lt;/li&gt;
+  &lt;li&gt;贪心算法（任务调度，）&lt;/li&gt;
+  &lt;li&gt;平摊分析（势能方法，记账法，）&lt;/li&gt;
+  &lt;li&gt;二项堆&lt;/li&gt;
+  &lt;li&gt;斐波那契堆&lt;/li&gt;
+  &lt;li&gt;最大流（残余流量，最长路径，割）&lt;/li&gt;
+&lt;/ul&gt;
+
+    </content>
+  </entry>
+  
+  <entry>
+    <title>java多线程面试题</title>
+    <link href="/tech/20141105"/>
+    <updated>2014-11-05T00:00:00+08:00</updated>
+    <id>/tech/java多线程面试题</id>
+    <author>
+      <name>longstreet</name>
+      <uri>/</uri>
+      <email>1055820594@qq.com</email>
+    </author>
+    <content type="html">
+      
+      &lt;blockquote&gt;
+  &lt;p&gt;摘要： 面试遇到的java多线程问题&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;threadlocal-&quot;&gt;什么是 ThreadLocal 类，怎么使用它？&lt;/h3&gt;
+
+&lt;p&gt;ThreadLocal 是一个线程级别的局部变量，并非“本地线程”。ThreadLocal 为每个使用该变量的线程提供了一个独立的变量副本，每个线程修改副本时不影响其它线程对象的副本(译者注)。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;下面是线程局部变量(ThreadLocal variables)的关键点：
+    &lt;ol&gt;
+      &lt;li&gt;一个线程局部变量(ThreadLocal variables)为每个线程方便地提供了一个单独的变量。&lt;/li&gt;
+      &lt;li&gt;ThreadLocal 实例通常作为静态的私有的(private static)字段出现在一个类中，这个类用来关联一个线程。&lt;/li&gt;
+      &lt;li&gt;当多个线程访问 ThreadLocal 实例时，每个线程维护 ThreadLocal 提供的独立的变量副本。&lt;/li&gt;
+      &lt;li&gt;常用的使用可在 DAO 模式中见到，当 DAO 类作为一个单例类时，数据库链接(connection)被每一个线程独立的维护，互不影响。(基于线程的单例)&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+    </content>
+  </entry>
+  
+  <entry>
+    <title>《JAVA7并发编程实战》读书笔记</title>
+    <link href="/book/20141104"/>
+    <updated>2014-11-04T00:00:00+08:00</updated>
+    <id>/book/《JAVA7并发编程实战》读书笔记</id>
+    <author>
+      <name>longstreet</name>
+      <uri>/</uri>
+      <email>1055820594@qq.com</email>
+    </author>
+    <content type="html">
+      
+      &lt;blockquote&gt;
+  &lt;p&gt;摘要： 《JAVA7并发编程实战》读书笔记&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;第一章：&lt;/h2&gt;
+
+&lt;h6 id=&quot;section-1&quot;&gt;线程创建&lt;/h6&gt;
+&lt;p&gt;获取线程信息，优先级设定，线程状态(new, blocked, waiting, runnable, terminated, time, waiting)&lt;/p&gt;
+
+&lt;h6 id=&quot;section-2&quot;&gt;线程中断&lt;/h6&gt;
+&lt;p&gt;需要在线程里面做检测是否中断&lt;/p&gt;
+
+&lt;h6 id=&quot;section-3&quot;&gt;中断控制&lt;/h6&gt;
+&lt;p&gt;检测中断信号，手动抛出中断异常&lt;/p&gt;
+
+&lt;h6 id=&quot;sleep&quot;&gt;线程休眠和恢复sleep()&lt;/h6&gt;
+&lt;p&gt;休眠时可以被中断，抛出中断异常&lt;/p&gt;
+
+&lt;h6 id=&quot;join&quot;&gt;等待某线程的终止join()&lt;/h6&gt;
+&lt;p&gt;等待该线程执行结束再执行当前线程&lt;/p&gt;
+
+&lt;h6 id=&quot;section-4&quot;&gt;守护线程&lt;/h6&gt;
+&lt;p&gt;为其他线程提供服务，start前调用setDeamon&lt;/p&gt;
+
+&lt;h6 id=&quot;section-5&quot;&gt;不可控异常处理&lt;/h6&gt;
+&lt;p&gt;非运行异常可以被捕获，try catch，运行时异常再控制台打印的是堆栈记录，可以实现UncaghtExceptionHandler接口，实现uncaughtException方法，接受线程和抛出异常的参数，并且设置不可捕获异常处理方法。thread.setUncaughtExceptionHandler(xxx);&lt;/p&gt;
+
+&lt;h6 id=&quot;section-6&quot;&gt;线程局部变量&lt;/h6&gt;
+&lt;p&gt;在不同步的情况下调用同一个类的线程，该类里面的变量将被多个线程所共享，一个线程里面改变类一个属性，所有线程都会被这个改变所影响。某种情况下，这个对象的属性不需要被所有线程所共享，可以用线程局部变量的机制，ThreadLocal。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ThreadLocal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;startDate&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ThreadLocal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;(){&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;protected&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Date&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initialValue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(){&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;再该类的线程里面，调用startDate.get()获取该变量。如果该线程没有初始化该值，就调用initialValue方法初始化该值。&lt;/p&gt;
+
+&lt;h6 id=&quot;section-7&quot;&gt;线程分组&lt;/h6&gt;
+&lt;p&gt;可以将执行同样任务的线程分作一组，无论多少线程，只需要单一的调用，就可以对组内所有线程进行访问和操作线程组内不可控异常处理方式，该类线程异常抛出，首先寻找抛出这个异常的非捕获异常处理器，如果不存在，jvm接着查找该线程所在的线程组的非捕获异常处理器如果也不存在就寻找默认的非捕获异常处理器。&lt;/p&gt;
+
+&lt;h6 id=&quot;section-8&quot;&gt;线程工厂类创建线程&lt;/h6&gt;
+
+&lt;h2 id=&quot;section-9&quot;&gt;第二章：&lt;/h2&gt;
+
+&lt;h6 id=&quot;synchronized&quot;&gt;synchronized&lt;/h6&gt;
+&lt;p&gt;主要看用哪个锁；对象和类的锁不一样，所以static Synchronized 和synchronized方法是可以同时访问的；而synchronized的方法默认的锁是所在的类对象，所以同一个类的两个同步方法不能被两个线程同时访问，同步代码块可以指定哪个对象或者类作为锁，对有的条件不符的，需要让线程wait() notify() notifyAll()&lt;/p&gt;
+
+&lt;h6 id=&quot;section-10&quot;&gt;使用锁实现同步&lt;/h6&gt;
+&lt;p&gt;比synchronized功能更强大更灵活，实现类ReentrantLock ，使用他的lock() unlock()方法创建临界区&lt;/p&gt;
+
+&lt;h6 id=&quot;readwritelock-reentrantreadwritelock&quot;&gt;ReadWriteLock ReentrantReadWriteLock&lt;/h6&gt;
+&lt;p&gt;有readLock().lock()  writeLock().lock()&lt;/p&gt;
+
+&lt;h6 id=&quot;section-11&quot;&gt;锁的公平性&lt;/h6&gt;
+&lt;p&gt;公平表示先让等待时间最长的线程执行，&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;- Condition类通过锁Lock.newCondition条件不符时，需要await()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;section-12&quot;&gt;第三章&lt;/h2&gt;
+
+&lt;h6 id=&quot;semaphore&quot;&gt;Semaphore&lt;/h6&gt;
+&lt;pre&gt;&lt;code&gt;- acquire()
+- 操作资源
+- release() 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;信号量内部计数器大于0意味着有资源可用，等于0意味着没有资源，必须等待
+如果为二进制信号量 一个资源或临界区同一时间只能又一个线程所访问。
+如果信号量计数器大于一个，资源也大于一个，即使获取了信号量，也需要通过判断资源被使用没有来同步。如一个打印队列，三个打印机。信号量为3，获取信号量之后，判断哪个打印机可用，然后再打印。&lt;/p&gt;
+
+&lt;h6 id=&quot;countdownlatch&quot;&gt;CountDownLatch类&lt;/h6&gt;
+&lt;p&gt;可以等待要完成的操作数（初始化参数），这些操作完成之后，通过countDown()方法将内部计数器减1，并调用await()，当计数器等于0时之后唤醒所有调用await方法进入睡眠的线程。如会议需要所有人到齐才能开会。这个类不可以重置到初始计时器的值&lt;/p&gt;
+
+&lt;h6 id=&quot;cyclicbarrier&quot;&gt;CyclicBarrier类&lt;/h6&gt;
+&lt;p&gt;当所有线程达到某集合点，这个类将指定某个线程执行。可以实现分治变成。所有其他任务完成后再执行某任务。例如多线程查找某多维数组中某值出现的次数，分多个线程查找，等所有线程执行完毕，再加起来。这个类可以重置到初始计时器的值。适用于分了之后再合起来&lt;/p&gt;
+
+&lt;h6 id=&quot;phaser&quot;&gt;Phaser类&lt;/h6&gt;
+&lt;p&gt;设定制定数目的线程，分阶段运行这些线程。某线程执行到arriveAndAwaitAdvance()方法处，phaser对象减少1，并置于休眠，等待所有其他线程完成这个阶段，使所有线程处于同一起跑线来执行下一个阶段，如果提前结束，调用arriveAndDeregister(),当所有线程执行结束，phaser对象不存在参与同步的线程，状态变成终止态。如，搜索完文档，系统，应用的日志信息之后，再删除超过24小时的日志，再将结果打印到控制台。适用于多阶段&lt;/p&gt;
+
+&lt;p&gt;Phaser提供OnAdvance()方法，再phaser阶段改变时自动执行，传入两个参数，一个阶段数一个参与者数量，该方法默认注册的参与者数量为0返回true，否则返回为false，可通过继承覆盖这个方法。再每个阶段调用arriveAndAwaitAdvance()方法使各个线程在这个位置等。然后进入下个阶段。如老师布置作业，第一题所有人答出来之后，才开始第二题，继续下去。适用于多个阶段。&lt;/p&gt;
+
+&lt;h6 id=&quot;exchanger&quot;&gt;Exchanger&lt;/h6&gt;
+&lt;p&gt;允许两个线程之间定义同步点，在同步点交换数据结构。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-13&quot;&gt;第四章&lt;/h2&gt;
+
+&lt;h6 id=&quot;section-14&quot;&gt;线程执行器,(就是线程池)&lt;/h6&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ThreadPoolExecutor&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;executor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ThreadPoolExecutor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Executors&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;newCachedThreadPool&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Task&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Runnable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{}&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;executor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;execute&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Task&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;())&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;executor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;shutdown&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h6 id=&quot;section-15&quot;&gt;指定线程数&lt;/h6&gt;
+&lt;p&gt;newFixedThreadPool(int n),从执行器中返回执行结果。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ThreadPoolExecutor&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;executor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ThreadPoolExecutor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Executors&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;newFixedThreadPool&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Task&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Callable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ResultType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ResultType&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;call&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(){}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Future&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ResultType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;resultFuture&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;executor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;submit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Task&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;ResultType&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;resultFuture&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;executor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;shutdown&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h6 id=&quot;section-16&quot;&gt;运行多个任务&lt;/h6&gt;
+&lt;p&gt;处理第一个结果&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Task&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Callable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ResultType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ResultType&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;call&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(){}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Task&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;taskList&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ThreadPoolExecutor&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;executor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ThreadPoolExecutor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Executors&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;newFixedThreadPool&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;ResultType&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;executor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;invokeAny&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;taskList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;executor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;shutdown&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h6 id=&quot;section-17&quot;&gt;运行并返回所有任务&lt;/h6&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ResultType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;resultList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;executor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;invokeAll&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;taskList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h6 id=&quot;section-18&quot;&gt;执行器中延时执行任务&lt;/h6&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ResultType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;resultList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;executor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;schedule&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TimeUnit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;SECONDS&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h6 id=&quot;section-19&quot;&gt;周期性执行任务&lt;/h6&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ResultType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;resultList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;executor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;scheduleAtFixedRate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TimeUnit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;SECONDS&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h6 id=&quot;section-20&quot;&gt;执行器中取消任务&lt;/h6&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;Future&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ResultType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;executor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;submit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Task&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;cancel&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;取消一个已经发送给执行器的任务，参数为true取消正在运行的任务，控制任务的完成。一般被用来执行后期处理操作。当任务完成受FutureTask类控制，将会调用方法done()，默认该方法为空，可以继承覆盖掉该方法。当callable任务执行完毕，将调用FutureTask的done()方法。&lt;/p&gt;
+
+&lt;h6 id=&quot;section-21&quot;&gt;任务启动和结果分离处理&lt;/h6&gt;
+&lt;p&gt;需要在一个对象里面启动任务，另一个对象里面处理结果。CompletionService类的submit方法用来启动任务，poll方法得到任务结果。&lt;/p&gt;
+
+&lt;h6 id=&quot;section-22&quot;&gt;任务被拒绝机制&lt;/h6&gt;
+&lt;p&gt;RejectedExecutionHandler接口的rejectedExecution()方法被拒绝的任务都要调用这个方法。需要先 setRejectedExecutionHandler() 方法来处理被拒绝的任务。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-23&quot;&gt;第五章&lt;/h2&gt;
+
+&lt;h5 id=&quot;forkjoin&quot;&gt;Fork/Join框架是能够解决通过分治技术将问题拆分小任务的问题&lt;/h5&gt;
+&lt;p&gt;核心是ForkJoinPool和ForkJoinTask里两个类，实现forkJoin任务，需要实现一个下面的方法RecursiveAction(没有返回结果) RecursiveTask（有返回结果）&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Task&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;RecursiveAction&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;compute&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(){}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//实现具体的分治细节。大于临界值，分成两个任务，invokeAll(t1,t2)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;ForkJoinPool&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pool&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;ForkJoinPool&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;pool&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;execute&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;合并任务的结果和第四章的返回callable结果一样。需要将分成两个任务的task的结果获取出来，task.get()&lt;/li&gt;
+  &lt;li&gt;异步运行&lt;/li&gt;
+  &lt;li&gt;同步方法invokeAll(), 工作者线程被休眠了，但仍可分配新任务。&lt;/li&gt;
+  &lt;li&gt;异步方法fork()，任务将继续进行&lt;/li&gt;
+&lt;/ul&gt;
+
+    </content>
+  </entry>
+  
+  <entry>
+    <title>数据库事务四大特性</title>
+    <link href="/tech/20141029"/>
+    <updated>2014-10-29T00:00:00+08:00</updated>
+    <id>/tech/数据库事务四大特性</id>
+    <author>
+      <name>longstreet</name>
+      <uri>/</uri>
+      <email>1055820594@qq.com</email>
+    </author>
+    <content type="html">
+      
+      &lt;blockquote&gt;
+  &lt;p&gt;摘要： 数据库事务四大特性&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;一、定义：&lt;/h2&gt;
+&lt;p&gt;事务（transaction)，有一系列操作序列构成的执行单元，该单元要么都执行，要么都不执行，是个不可分割的单元。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;二、事务的基本性质&lt;/h2&gt;
+&lt;p&gt;事务有以下四个基本性质&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;原子性Atomicity
+  事务所包含的所有操作要么全部执行，要么全部不执行。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;一致性Consistency
+  事务开始前和结束后，数据库一直处于一致性的状态。事务应该把数据库从一个一致性状态转换到另外一个一致性状态
+  如：转账事务前后，两账户下的金额之和不变。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;隔离性Isolation
+  事务的隔离性要求系统必须保证事务不受其他并发执行事务的影响。即要求：任一对事务T1和T2，事务T1看来，T2要么在T1开始之前执行要么在T1完成之后才开始执行。这样每个事务都感觉不到系统中有并发事务执行。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;持久性Durability
+  一个事务一旦成功完成，它对数据库的改变必须是永久的，即使是在系统遇到故障的情况下也不会丢失，数据的重要性决定了事物的持久性的重要。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+    </content>
+  </entry>
+  
+  <entry>
+    <title>使用putty上传文件</title>
+    <link href="/tech/20141024"/>
+    <updated>2014-10-24T00:00:00+08:00</updated>
+    <id>/tech/使用putty上传文件</id>
+    <author>
+      <name>longstreet</name>
+      <uri>/</uri>
+      <email>1055820594@qq.com</email>
+    </author>
+    <content type="html">
+      
+      &lt;blockquote&gt;
+  &lt;p&gt;摘要： 使用putty上传文件&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;前提：要完成以下这些操作，Windows内必须有完整的PuTTy安装包putty-0.63-installer.exe而不仅仅是putty.exe这一个文件&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;open calpico.dreamhost.com 用于连接远程linux服务器，其中calpico.dreamhost.com替换为您自己的地址。&lt;/li&gt;
+  &lt;li&gt;cd public_html/wp-content/ 用于切换远程Linux服务器上的目录，其中public_html/wp-contnt替换为您自己实际的路径。&lt;/li&gt;
+  &lt;li&gt;lcd D:/downloads/ 用于切换本地的路径，其中D:/downloads/就是我自己电脑里的D:/downloads/，总之，切换本地路径的目的是为了上传这个目录里的文件或者将服务器上的文件下载到这个文件夹里，如果你要上传位于C盘Windows文件夹里的notepad.exe到服务器上，就得 lcd C:/windows/。&lt;/li&gt;
+  &lt;li&gt;put notepad.exe 上传notepad.exe到服务器上。&lt;/li&gt;
+  &lt;li&gt;get notepad.exe 下载notepad.exe到自己电脑上。&lt;/li&gt;
+&lt;/ul&gt;
+
+    </content>
+  </entry>
+  
+  <entry>
+    <title>排序算法</title>
+    <link href="/tech/20141022"/>
+    <updated>2014-10-22T00:00:00+08:00</updated>
+    <id>/tech/排序算法</id>
+    <author>
+      <name>longstreet</name>
+      <uri>/</uri>
+      <email>1055820594@qq.com</email>
+    </author>
+    <content type="html">
+      
+      &lt;blockquote&gt;
+  &lt;p&gt;摘要： 排序算法的思想和算法理解中的描述&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;冒泡排序&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;思想：冒泡法&lt;/p&gt;
+
+&lt;p&gt;描述：两两比较，只要两数顺序错误就互换，一次遍历之后，最后一个元素一定是最大的。较大元素一个一个像冒泡一样转移到数组后方&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;选择排序&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;思想：每次找到最小的值，放在最前的位置&lt;/p&gt;
+
+&lt;p&gt;描述：第一小的数和a[0]互换,第二小的数和a[1]互换……&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;插入排序&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;思想：扑克牌插入&lt;/p&gt;
+
+&lt;p&gt;描述：假设前面的所有位已经排好序，当前位到后面的都没排序。从当前数往前面遍历，先保存当前数值，找到前一位，如果比当前数大，就往后面挪一位，如果比当前位小，就存在该位的后面&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;希尔排序&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;思想：分成很多组，每一组都插入排序&lt;/p&gt;
+
+&lt;p&gt;描述：将数组按步长分成较小长度的数组，使得相同步长距离的数在一个小数组，我们对这个小组进行排序。然后改步长，每改一次都排序一次，使得每次排序之后的小数字都排到前面去，大数字都排到后面去了。随着步长的变小，小数组规模也慢慢变大，但是小数组基本排好序，所以用插入排序不需要太多时间。最后一次排序就是原数组进行一次步长为1的排序，也就是直接插入排序了。&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;堆排序&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;思想：有一个堆（其实就是完全二叉树），&lt;/p&gt;
+
+&lt;p&gt;描述：&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;合并排序&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;思想：分治法（把问题分解成很多小问题，直到小问题很好解决）&lt;/p&gt;
+
+&lt;p&gt;描述：把要排序的数组a[]分成两半a1[],a2[]，然后对a1[],a2[]分别再分。直到分成只有一个元素，再把分开的元素合并。合并的时候，才是真正的排序。两堆数组排序a1[],a2[]，已经是按照大小顺序排好了，现在就剩下合并了。那就从两个数组的各自第一个元素开始比较，如果a[i]&amp;lt;a[j]，就把a[i]存回去，i++。为了防止数组溢出，需要设置一个哨兵，那就是最后一个元素了，大于一切0到1的数字，对应的i就不会自加了。&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;快速排序&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;思想：找一个标杆，比标杆小的数放在标杆前面，比标杆大的数放在标杆后面，递归&lt;/p&gt;
+
+&lt;p&gt;描述：对整个数组找一个标杆，我们选择最后一个数，存在临时变量，然后分别从最前面一个值和最后一个值开始往中间遍历，首先，比标杆大的先填在标杆处，比标杆小的那个数就保存在前一个比标杆大已经移动的位置，（因为这个值已经保存了，相当于空出来了），同意，再比标杆大的就存在前一个比标杆小的已经移动的位置上面。这样每次都有一个空来填需要移动的数。最后将标杆保存在中间留出的空位上。并返回该处的位置。该位置前面的数虽然都比标杆小，但仍未排序，就可以调用快排，递归实现了。&lt;/p&gt;
+
+    </content>
+  </entry>
+  
+  
+</feed>

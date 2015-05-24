@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>《JAVA7并发编程实战》读书笔记 • longstreet's blog</title>
+    <meta name="description" content="
+  摘要： 《JAVA7并发编程实战》读书笔记
+
+
+">
+    <meta name="keywords" content="">
+    
+    
+    	<!-- Twitter Cards -->
+	<meta name="twitter:title" content="《JAVA7并发编程实战》读书笔记">
+	<meta name="twitter:description" content="
+  摘要： 《JAVA7并发编程实战》读书笔记
+
+
+">
+	
+	
+	
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:image" content="/images/logo.PNG# 120x120 px default image used for Twitter summary card">
+	
+	<!-- Open Graph -->
+	<meta property="og:locale" content="">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="《JAVA7并发编程实战》读书笔记">
+	<meta property="og:description" content="
+  摘要： 《JAVA7并发编程实战》读书笔记
+
+
+">
+	<meta property="og:url" content="/book/20141104">
+	<meta property="og:site_name" content="longstreet's blog">
+
+    <link rel="canonical" href="/book/20141104">
+
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="longstreet's blog Atom Feed">
+    <link href="/sitemap.xml" type="application/xml" rel="sitemap" title="Sitemap">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="cleartype" content="on">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <!-- HTML5 Shiv and Media Query Support for IE -->
+    <!--[if lt IE 9]>
+      <script src="/js/vendor/html5shiv.min.js"></script>
+      <script src="/js/vendor/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <body id="js-body">
+    <!--[if lt IE 9]><div class="upgrade notice-warning"><strong>Your browser is quite old!</strong> Why not <a href="http://whatbrowser.org/">upgrade to a newer one</a> to better enjoy this site?</div><![endif]-->
+
+    <header id="masthead">
+  <div class="inner-wrap">
+    <a href="/" class="site-title">longstreet's blog</a>
+    <nav role="navigation" class="menu top-menu">
+        <ul class="menu-item">
+	<li class="home"><a href="/">longstreet's blog</a></li>
+	
+    
+        
+    
+    <li><a href="/" >Home</a></li>
+  
+    
+        
+    
+    <li><a href="/categories/tech/" >Tech</a></li>
+  
+    
+        
+    
+    <li><a href="/categories/project/" >Project</a></li>
+  
+    
+        
+    
+    <li><a href="/categories/book/" >Book</a></li>
+  
+    
+        
+    
+    <li><a href="/about/" >About</a></li>
+  
+</ul>
+    </nav>
+  </div><!-- /.inner-wrap -->
+</header><!-- /.masthead -->
+    <nav role="navigation" id="js-menu" class="sliding-menu-content">
+  <h5>longstreet's blog 
+  <!-- <span>Table of Contents</span></h5> -->
+  <ul class="menu-item">
+    <li>
+      <a href="/">
+        
+        <div class="title">Home</div>
+        
+      </a>
+    </li><li>
+      <a href="/categories/tech/">
+        
+        <div class="title">Tech</div>
+        
+      </a>
+    </li><li>
+      <a href="/categories/project/">
+        
+        <div class="title">Project</div>
+        
+      </a>
+    </li><li>
+      <a href="/categories/book/">
+        
+        <div class="title">Book</div>
+        
+      </a>
+    </li><li>
+      <a href="/about/">
+        
+        <div class="title">About</div>
+        
+      </a>
+    </li>
+  </ul>
+</nav>
+<button type="button" id="js-menu-trigger" class="sliding-menu-button lines-button x2" role="button" aria-label="Toggle Navigation">
+  <span class="nav-lines"></span>
+</button>
+
+<div id="js-menu-screen" class="menu-screen"></div>
+
+
+    <div id="page-wrapper">
+      <div id="main" role="main">
+	<article class="wrap" itemscope itemtype="http://schema.org/Article">
+		
+  <nav class="breadcrumbs">
+    <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+      <a href="/" itemprop="url">
+        <span itemprop="title">Home</span>
+      </a> › 
+    <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+      <a href="/categories/book/" itemprop="url">
+        <span itemprop="title">Book</span>
+      </a>
+    </span>
+  </nav><!-- /.breadcrumbs -->
+
+		<div class="page-title">
+			<h1>《JAVA7并发编程实战》读书笔记</h1>
+		</div>
+		<div class="inner-wrap">
+			<div id="content" class="page-content" itemprop="articleBody">
+				<blockquote>
+  <p>摘要： 《JAVA7并发编程实战》读书笔记</p>
+</blockquote>
+
+<hr />
+
+<h2 id="section">第一章：</h2>
+
+<h6 id="section-1">线程创建</h6>
+<p>获取线程信息，优先级设定，线程状态(new, blocked, waiting, runnable, terminated, time, waiting)</p>
+
+<h6 id="section-2">线程中断</h6>
+<p>需要在线程里面做检测是否中断</p>
+
+<h6 id="section-3">中断控制</h6>
+<p>检测中断信号，手动抛出中断异常</p>
+
+<h6 id="sleep">线程休眠和恢复sleep()</h6>
+<p>休眠时可以被中断，抛出中断异常</p>
+
+<h6 id="join">等待某线程的终止join()</h6>
+<p>等待该线程执行结束再执行当前线程</p>
+
+<h6 id="section-4">守护线程</h6>
+<p>为其他线程提供服务，start前调用setDeamon</p>
+
+<h6 id="section-5">不可控异常处理</h6>
+<p>非运行异常可以被捕获，try catch，运行时异常再控制台打印的是堆栈记录，可以实现UncaghtExceptionHandler接口，实现uncaughtException方法，接受线程和抛出异常的参数，并且设置不可捕获异常处理方法。thread.setUncaughtExceptionHandler(xxx);</p>
+
+<h6 id="section-6">线程局部变量</h6>
+<p>在不同步的情况下调用同一个类的线程，该类里面的变量将被多个线程所共享，一个线程里面改变类一个属性，所有线程都会被这个改变所影响。某种情况下，这个对象的属性不需要被所有线程所共享，可以用线程局部变量的机制，ThreadLocal。</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">private</span> <span class="kd">static</span> <span class="n">ThreadLocal</span><span class="o">&lt;</span><span class="n">Date</span><span class="o">&gt;</span> <span class="n">startDate</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ThreadLocal</span><span class="o">&lt;</span><span class="n">Date</span><span class="o">&gt;(){</span>
+    <span class="kd">protected</span> <span class="n">Date</span> <span class="nf">initialValue</span><span class="o">(){</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nf">Date</span><span class="o">();</span>
+    <span class="o">}</span>
+<span class="o">};</span></code></pre></div>
+
+<p>再该类的线程里面，调用startDate.get()获取该变量。如果该线程没有初始化该值，就调用initialValue方法初始化该值。</p>
+
+<h6 id="section-7">线程分组</h6>
+<p>可以将执行同样任务的线程分作一组，无论多少线程，只需要单一的调用，就可以对组内所有线程进行访问和操作线程组内不可控异常处理方式，该类线程异常抛出，首先寻找抛出这个异常的非捕获异常处理器，如果不存在，jvm接着查找该线程所在的线程组的非捕获异常处理器如果也不存在就寻找默认的非捕获异常处理器。</p>
+
+<h6 id="section-8">线程工厂类创建线程</h6>
+
+<h2 id="section-9">第二章：</h2>
+
+<h6 id="synchronized">synchronized</h6>
+<p>主要看用哪个锁；对象和类的锁不一样，所以static Synchronized 和synchronized方法是可以同时访问的；而synchronized的方法默认的锁是所在的类对象，所以同一个类的两个同步方法不能被两个线程同时访问，同步代码块可以指定哪个对象或者类作为锁，对有的条件不符的，需要让线程wait() notify() notifyAll()</p>
+
+<h6 id="section-10">使用锁实现同步</h6>
+<p>比synchronized功能更强大更灵活，实现类ReentrantLock ，使用他的lock() unlock()方法创建临界区</p>
+
+<h6 id="readwritelock-reentrantreadwritelock">ReadWriteLock ReentrantReadWriteLock</h6>
+<p>有readLock().lock()  writeLock().lock()</p>
+
+<h6 id="section-11">锁的公平性</h6>
+<p>公平表示先让等待时间最长的线程执行，</p>
+
+<pre><code>- Condition类通过锁Lock.newCondition条件不符时，需要await()
+</code></pre>
+
+<h2 id="section-12">第三章</h2>
+
+<h6 id="semaphore">Semaphore</h6>
+<pre><code>- acquire()
+- 操作资源
+- release() 
+</code></pre>
+
+<p>信号量内部计数器大于0意味着有资源可用，等于0意味着没有资源，必须等待
+如果为二进制信号量 一个资源或临界区同一时间只能又一个线程所访问。
+如果信号量计数器大于一个，资源也大于一个，即使获取了信号量，也需要通过判断资源被使用没有来同步。如一个打印队列，三个打印机。信号量为3，获取信号量之后，判断哪个打印机可用，然后再打印。</p>
+
+<h6 id="countdownlatch">CountDownLatch类</h6>
+<p>可以等待要完成的操作数（初始化参数），这些操作完成之后，通过countDown()方法将内部计数器减1，并调用await()，当计数器等于0时之后唤醒所有调用await方法进入睡眠的线程。如会议需要所有人到齐才能开会。这个类不可以重置到初始计时器的值</p>
+
+<h6 id="cyclicbarrier">CyclicBarrier类</h6>
+<p>当所有线程达到某集合点，这个类将指定某个线程执行。可以实现分治变成。所有其他任务完成后再执行某任务。例如多线程查找某多维数组中某值出现的次数，分多个线程查找，等所有线程执行完毕，再加起来。这个类可以重置到初始计时器的值。适用于分了之后再合起来</p>
+
+<h6 id="phaser">Phaser类</h6>
+<p>设定制定数目的线程，分阶段运行这些线程。某线程执行到arriveAndAwaitAdvance()方法处，phaser对象减少1，并置于休眠，等待所有其他线程完成这个阶段，使所有线程处于同一起跑线来执行下一个阶段，如果提前结束，调用arriveAndDeregister(),当所有线程执行结束，phaser对象不存在参与同步的线程，状态变成终止态。如，搜索完文档，系统，应用的日志信息之后，再删除超过24小时的日志，再将结果打印到控制台。适用于多阶段</p>
+
+<p>Phaser提供OnAdvance()方法，再phaser阶段改变时自动执行，传入两个参数，一个阶段数一个参与者数量，该方法默认注册的参与者数量为0返回true，否则返回为false，可通过继承覆盖这个方法。再每个阶段调用arriveAndAwaitAdvance()方法使各个线程在这个位置等。然后进入下个阶段。如老师布置作业，第一题所有人答出来之后，才开始第二题，继续下去。适用于多个阶段。</p>
+
+<h6 id="exchanger">Exchanger</h6>
+<p>允许两个线程之间定义同步点，在同步点交换数据结构。</p>
+
+<h2 id="section-13">第四章</h2>
+
+<h6 id="section-14">线程执行器,(就是线程池)</h6>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">private</span> <span class="n">ThreadPoolExecutor</span> <span class="n">executor</span><span class="o">=(</span><span class="n">ThreadPoolExecutor</span><span class="o">)</span><span class="n">Executors</span><span class="o">.</span><span class="na">newCachedThreadPool</span><span class="o">()</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Task</span> <span class="kd">implements</span> <span class="n">Runnable</span><span class="o">{}</span>
+<span class="n">executor</span><span class="o">.</span><span class="na">execute</span><span class="o">(</span><span class="k">new</span> <span class="nf">Task</span><span class="o">())</span>
+<span class="n">executor</span><span class="o">.</span><span class="na">shutdown</span><span class="o">();</span></code></pre></div>
+
+<h6 id="section-15">指定线程数</h6>
+<p>newFixedThreadPool(int n),从执行器中返回执行结果。</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">private</span> <span class="n">ThreadPoolExecutor</span> <span class="n">executor</span><span class="o">=(</span><span class="n">ThreadPoolExecutor</span><span class="o">)</span><span class="n">Executors</span><span class="o">.</span><span class="na">newFixedThreadPool</span><span class="o">(</span><span class="mi">2</span><span class="o">);</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Task</span> <span class="kd">implements</span> <span class="n">Callable</span><span class="o">&lt;</span><span class="n">ResultType</span><span class="o">&gt;{</span>
+    <span class="kd">public</span> <span class="n">ResultType</span> <span class="nf">call</span><span class="o">(){}</span>
+<span class="o">}</span>
+<span class="n">Future</span><span class="o">&lt;</span><span class="n">ResultType</span><span class="o">&gt;</span> <span class="n">resultFuture</span><span class="o">=</span><span class="n">executor</span><span class="o">.</span><span class="na">submit</span><span class="o">(</span><span class="k">new</span> <span class="nf">Task</span><span class="o">());</span>
+<span class="n">ResultType</span> <span class="n">result</span><span class="o">=</span> <span class="n">resultFuture</span><span class="o">.</span><span class="na">get</span><span class="o">()</span>
+<span class="n">executor</span><span class="o">.</span><span class="na">shutdown</span><span class="o">();</span></code></pre></div>
+
+<h6 id="section-16">运行多个任务</h6>
+<p>处理第一个结果</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Task</span> <span class="kd">implements</span> <span class="n">Callable</span><span class="o">&lt;</span><span class="n">ResultType</span><span class="o">&gt;{</span>
+    <span class="kd">public</span> <span class="n">ResultType</span> <span class="nf">call</span><span class="o">(){}</span>
+<span class="o">}</span>
+<span class="n">List</span><span class="o">&lt;</span><span class="n">Task</span><span class="o">&gt;</span> <span class="n">taskList</span>
+<span class="kd">private</span> <span class="n">ThreadPoolExecutor</span> <span class="n">executor</span><span class="o">=(</span><span class="n">ThreadPoolExecutor</span><span class="o">)</span><span class="n">Executors</span><span class="o">.</span><span class="na">newFixedThreadPool</span><span class="o">(</span><span class="mi">2</span><span class="o">);</span>
+<span class="n">ResultType</span> <span class="n">result</span><span class="o">=</span><span class="n">executor</span><span class="o">.</span><span class="na">invokeAny</span><span class="o">(</span><span class="n">taskList</span><span class="o">);</span>
+<span class="n">executor</span><span class="o">.</span><span class="na">shutdown</span><span class="o">();</span></code></pre></div>
+
+<h6 id="section-17">运行并返回所有任务</h6>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">List</span><span class="o">&lt;</span><span class="n">ResultType</span><span class="o">&gt;</span> <span class="n">resultList</span><span class="o">=</span><span class="n">executor</span><span class="o">.</span><span class="na">invokeAll</span><span class="o">(</span><span class="n">taskList</span><span class="o">);</span></code></pre></div>
+
+<h6 id="section-18">执行器中延时执行任务</h6>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">List</span><span class="o">&lt;</span><span class="n">ResultType</span><span class="o">&gt;</span> <span class="n">resultList</span><span class="o">=</span><span class="n">executor</span><span class="o">.</span><span class="na">schedule</span><span class="o">(</span><span class="n">task</span><span class="o">,</span><span class="n">time</span><span class="o">,</span><span class="n">TimeUnit</span><span class="o">.</span><span class="na">SECONDS</span><span class="o">);</span></code></pre></div>
+
+<h6 id="section-19">周期性执行任务</h6>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">List</span><span class="o">&lt;</span><span class="n">ResultType</span><span class="o">&gt;</span> <span class="n">resultList</span><span class="o">=</span><span class="n">executor</span><span class="o">.</span><span class="na">scheduleAtFixedRate</span><span class="o">(</span><span class="n">task</span><span class="o">,</span><span class="n">time</span><span class="o">,</span><span class="n">time</span><span class="o">,</span><span class="n">TimeUnit</span><span class="o">.</span><span class="na">SECONDS</span><span class="o">);</span></code></pre></div>
+
+<h6 id="section-20">执行器中取消任务</h6>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Future</span><span class="o">&lt;</span><span class="n">ResultType</span><span class="o">&gt;</span> <span class="n">result</span><span class="o">=</span><span class="n">executor</span><span class="o">.</span><span class="na">submit</span><span class="o">(</span><span class="k">new</span> <span class="nf">Task</span><span class="o">());</span>
+<span class="n">result</span><span class="o">.</span><span class="na">cancel</span><span class="o">(</span><span class="kc">true</span><span class="o">)</span></code></pre></div>
+
+<p>取消一个已经发送给执行器的任务，参数为true取消正在运行的任务，控制任务的完成。一般被用来执行后期处理操作。当任务完成受FutureTask类控制，将会调用方法done()，默认该方法为空，可以继承覆盖掉该方法。当callable任务执行完毕，将调用FutureTask的done()方法。</p>
+
+<h6 id="section-21">任务启动和结果分离处理</h6>
+<p>需要在一个对象里面启动任务，另一个对象里面处理结果。CompletionService类的submit方法用来启动任务，poll方法得到任务结果。</p>
+
+<h6 id="section-22">任务被拒绝机制</h6>
+<p>RejectedExecutionHandler接口的rejectedExecution()方法被拒绝的任务都要调用这个方法。需要先 setRejectedExecutionHandler() 方法来处理被拒绝的任务。</p>
+
+<h2 id="section-23">第五章</h2>
+
+<h5 id="forkjoin">Fork/Join框架是能够解决通过分治技术将问题拆分小任务的问题</h5>
+<p>核心是ForkJoinPool和ForkJoinTask里两个类，实现forkJoin任务，需要实现一个下面的方法RecursiveAction(没有返回结果) RecursiveTask（有返回结果）</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Task</span> <span class="kd">extends</span> <span class="n">RecursiveAction</span><span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">compute</span><span class="o">(){}</span>
+<span class="o">}</span><span class="c1">//实现具体的分治细节。大于临界值，分成两个任务，invokeAll(t1,t2)</span>
+<span class="n">ForkJoinPool</span> <span class="n">pool</span><span class="o">=</span><span class="k">new</span> <span class="nf">ForkJoinPool</span><span class="o">();</span>
+<span class="n">pool</span><span class="o">.</span><span class="na">execute</span><span class="o">(</span><span class="n">task</span><span class="o">);</span></code></pre></div>
+
+<ul>
+  <li>合并任务的结果和第四章的返回callable结果一样。需要将分成两个任务的task的结果获取出来，task.get()</li>
+  <li>异步运行</li>
+  <li>同步方法invokeAll(), 工作者线程被休眠了，但仍可分配新任务。</li>
+  <li>异步方法fork()，任务将继续进行</li>
+</ul>
+
+				<hr />
+				<footer class="page-footer">
+					
+
+
+<div class="author-image">
+	<img src="/images/bio-photo.jpg" alt="longstreet">
+</div><!-- ./author-image -->
+<div class="author-content">
+	<h3 class="author-name" >Written by <span itemprop="author">longstreet</span></h3>
+	<p class="author-bio"></p>
+</div><!-- ./author-content -->
+					<div class="inline-btn">
+	<a class="btn-social twitter" href="https://twitter.com/intent/tweet?text=《JAVA7并发编程实战》读书笔记&amp;url=/book/20141104&amp;via=" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i> Share on Twitter</a>
+	<a class="btn-social facebook" href="https://www.facebook.com/sharer/sharer.php?u=/book/20141104" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i> Share on Facebook</a>
+	<a class="btn-social google-plus"  href="https://plus.google.com/share?url=/book/20141104" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i> Share on Google+</a>
+</div><!-- /.share-this -->
+
+
+
+					<div class="page-meta">
+	<p>Updated <time datetime="2014-11-04T00:00:00Z" itemprop="datePublished">November 04, 2014</time></p>
+</div><!-- /.page-meta -->
+				</footer><!-- /.footer -->
+				<aside>
+					<hr />
+        <!-- 多说评论框 start -->
+        <div class="ds-thread" 
+             data-thread-key="20141104"  
+             data-title="《JAVA7并发编程实战》读书笔记 " 
+             data-url="/book/20141104 ">
+        </div>
+
+
+        <script type="text/javascript">
+        var duoshuoQuery = {short_name:"longstreetcc"};
+            (function() {
+                var ds = document.createElement('script');
+                ds.type = 'text/javascript';ds.async = true;
+                ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+                ds.charset = 'UTF-8';
+                (document.getElementsByTagName('head')[0] 
+                 || document.getElementsByTagName('body')[0]).appendChild(ds);
+            })();
+        </script>   
+        <!-- 多说公共JS代码 end -->
+				</aside>
+			</div><!-- /.content -->
+		</div><!-- /.inner-wrap -->
+		
+	</article><!-- ./wrap -->
+</div><!-- /#main -->
+
+      <footer role="contentinfo" id="site-footer">
+	<nav role="navigation" class="menu bottom-menu">
+		<ul class="menu-item">
+		
+      
+        
+      
+			<li><a href="/" >Home</a></li>
+		
+      
+        
+      
+			<li><a href="/categories/tech/" >Tech</a></li>
+		
+      
+        
+      
+			<li><a href="/categories/project/" >Project</a></li>
+		
+      
+        
+      
+			<li><a href="/categories/book/" >Book</a></li>
+		
+      
+        
+      
+			<li><a href="/about/" >About</a></li>
+		
+		</ul>
+	</nav><!-- /.bottom-menu -->
+	<p class="copyright">&#169; 2015 <a href="">longstreet's blog</a> powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> + <a href="http://mmistakes.github.io/skinny-bones-jekyll/" rel="nofollow">Skinny Bones</a>.</p>
+</footer>
+    </div>
+
+    <script src="/js/vendor/jquery-1.9.1.min.js"></script>
+    <script src="/js/main.js"></script>
+
+  </body>
+
+</html>
