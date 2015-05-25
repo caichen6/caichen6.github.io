@@ -21,10 +21,8 @@ permalink: /about/
 ##已完成
 
 
-- 搭建好博客，评论功能
+- 搭建好博客，评论、分享等功能
 - 用语音控制电脑程序的开启、关闭
-
----
 
 
 ![Project Euler](https://projecteuler.net/profile/longstreet.png)

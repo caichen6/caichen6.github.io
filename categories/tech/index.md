@@ -1,8 +1,6 @@
 ---
 layout: archive
-title: "Latest Posts in *Tech*"
-excerpt: "Technology knowledge in my work and projects "
-
+title: "Archive: Tech"
 ---
 
 <div class="tiles">

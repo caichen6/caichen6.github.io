@@ -1,8 +1,6 @@
 ---
 layout: archive
-title: "Latest Posts in *Project*"
-excerpt: "Documents of my projects"
-
+title: "Archive: Project"
 ---
 
 <div class="tiles">

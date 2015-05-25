@@ -1,8 +1,6 @@
 ---
 layout: archive
-title: "Latest Posts in *Book*"
-excerpt: "Reading Notes of books I read"
-
+title: "Archive: Book"
 ---
 
 <div class="tiles">
