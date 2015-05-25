@@ -12,8 +12,7 @@ permalink: /about/
 - 中国科学技术大学软件学院（苏州） 软件工程
 - Java工程师，Python爱好者
 - 经验：
-    - 软件开发实习生 鼎晟网络科技公司 
-    - Java软件开发实习生 广州海格网通公司
+    - Java软件开发实习生 广州海格网通公司 一年
 - 联系方式：longstreetcc@gmail.com
 
 ---
@@ -23,6 +22,4 @@ permalink: /about/
 
 - 搭建好博客，评论、分享等功能
 - 用语音控制电脑程序的开启、关闭
-
-
-![Project Euler](https://projecteuler.net/profile/longstreet.png)
+- ![Project Euler](https://projecteuler.net/profile/longstreet.png)
