@@ -14,7 +14,7 @@ sass:
     style: compressed
 permalink: /:categories/:year:month:day
 kramdown:
-  toc_levels: 1..2
+  toc_levels: 1..4
 highlighter: pygments
 gems:
   - jekyll-sitemap
@@ -23,7 +23,7 @@ gems:
 # Site owner
 owner:
   name: longstreet
-  email: 1055820594@qq.com
+  email: ustc.cai.chen@qq.com
   twitter:
   google:
     ad-client: 

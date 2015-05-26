@@ -8,17 +8,17 @@ share: false
 
 
 
-##关于我
+#关于我
 - 蔡晨 / longstreet
 - 中国科学技术大学软件学院（苏州） 软件工程
 - Java工程师，Python爱好者
 - 经历：
     - Java软件开发实习生 广州海格网通公司 一年
-- 联系方式：longstreetcc@gmail.com
+- 联系方式：ustc.cai.chen@qq.com
 
 ---
 
-##已完成
+#已完成
 
 
 - 搭建好博客，评论、分享等功能
