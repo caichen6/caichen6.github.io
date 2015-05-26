@@ -2,8 +2,8 @@
 layout: archive
 title: "Project Archive:"
 image: 
-    feature: project.png
-    credit: project
+    feature: project.jpg
+    teaser: project
 ---
 
 <div class="tiles">

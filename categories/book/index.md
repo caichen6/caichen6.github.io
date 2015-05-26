@@ -3,7 +3,7 @@ layout: archive
 title: "Book Archive:"
 image: 
     feature: book.jpg
-    credit: book
+    teaser: book
 ---
 
 <div class="tiles">

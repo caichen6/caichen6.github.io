@@ -2,10 +2,10 @@
 
 title: longstreet's Blog
 description: 人活着最重要的是开心
-logo: logo.PNG# 120x120 px default image used for Twitter summary card
-teaser: # 400x250 px default teaser image used in image archive grid
+logo: logo.png
+teaser: logo/teaser.jpg
 locale:
-url:  http://longstreetcc.github.io
+url:  #http://longstreetcc.github.io
 
 # Jekyll configuration
 
@@ -29,7 +29,7 @@ owner:
     ad-client: 
     ad-slot: 
   bio: 
-  avatar: bio-photo.jpg # 160x160 px image for author byline
+  avatar: logo/bio-photo.jpg # 160x160 px image for author byline
 disqus-shortname:
 
 

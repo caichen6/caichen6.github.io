@@ -3,7 +3,7 @@ layout: archive
 title: "Tech Archive:"
 image: 
     feature: tech.jpg
-    credit: tech
+    teaser: tech
 ---
 
 <div class="tiles">

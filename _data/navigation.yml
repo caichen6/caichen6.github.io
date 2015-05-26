@@ -2,16 +2,23 @@
 
 - title: Tech
   url: /categories/tech/
+  excerpt:
+  image: tech.jpg
 
 
 - title: Project
   url: /categories/project/
+  excerpt:
+  image: project.jpg
 
 
 
 - title: Book
   url: /categories/book/
-
+  excerpt:
+  image: book.jpg
 
 - title: About
   url: /about/
+  excerpt:
+  image: about.jpg

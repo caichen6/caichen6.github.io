@@ -4,6 +4,9 @@ title: About me
 date:   2015-05-26 15:18
 permalink: /about/
 share: false
+image: 
+    feature: about.jpg
+    teaser: about
 ---
 
 

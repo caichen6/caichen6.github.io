@@ -3,6 +3,9 @@ layout: article
 title: 怎么让WordPress的首页最新文章为摘要而不是全文
 description: 解决使用wordpress的主题时首页全文显示的问题
 category: tech
+image:
+    #feature: /teaser/project/macbook.jpg
+    teaser: /teaser/tech/wordpress.jpg
 ---
 
 >  摘要： {{page.description}}
