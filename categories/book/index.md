@@ -1,6 +1,9 @@
 ---
 layout: archive
-title: "Archive: Book"
+title: "Book Archive:"
+image: 
+    feature: book.jpg
+    credit: book
 ---
 
 <div class="tiles">

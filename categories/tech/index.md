@@ -1,6 +1,9 @@
 ---
 layout: archive
-title: "Archive: Tech"
+title: "Tech Archive:"
+image: 
+    feature: tech.jpg
+    credit: tech
 ---
 
 <div class="tiles">
