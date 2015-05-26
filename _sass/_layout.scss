@@ -199,12 +199,12 @@
 	}
   /* advertisements */
 	.ads {
-		position: relative;
+		position: initial;
 		text-align: center;
 		margin-top: $gutter;
 		margin-left: -$gutter;
 		margin-right: -$gutter;
-		padding: 10px 0 20px;
+		padding: 10px 0 10px;
 		background: lighten($border-color,5);
 		@include media($medium) {
 			@include span-columns(3);
@@ -212,7 +212,7 @@
 			margin-right: 0;
 		}
 		&:after {
-			content: 'me';
+			content: 'more about me';
 			position: absolute;
 			bottom: 0;
 			width: 100%;
