@@ -1,10 +1,11 @@
 ---
 layout: article
 title: About me
-date:   2015-05-20 15:18
+date:   2015-05-26 15:18
 permalink: /about/
+share: false
 ---
-<!-- ######2015-05-10-关于我.md -->
+
 
 
 ##关于我

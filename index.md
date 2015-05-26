@@ -1,7 +1,7 @@
 ---
 layout: archive
 permalink: /
-title: "Latest Posts"
+title: "Home"
 image: 
     feature: cover.jpg
     credit: Taken3
