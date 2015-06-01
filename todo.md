@@ -1,53 +1,13 @@
-#蔡晨 个人简历
-
-##个人信息
-- 蔡晨 男 24
-- 18571469300
-- ustc.cai.chen@qq.com
-
-##教育背景
-- 2012.9-2015.4 
-  -  中国科学技术大学 
-  -  软件学院 
-  -  软件工程 
-  -  硕士研究生
-- 2008.9-2012.6 
-  -  湖北工业大学 
-  -  电气学院 
-  -  自动化 
-  -  本科
-
-##专业和英语技能
-- 熟悉C、Java语言编程，了解Python语言；
-- 熟练掌握数据结构与基础算法、设计模式；
-- 熟悉SSH做后台开发；使用jQuery、openlayers做Web GIS前端开发；
-- 大学英语六级489分（通过），能熟练阅读英文文献。
-
-##实习经历
-- 2013.07-2014.07
-  -  广州海格通信集团股份有限公司 
-  -  软件开发工程师
-  -  研发无线通信网管理系统，实现了获取全网状态信息，并作数据统计的功能；
-  -  研发GIS地图监视系统，实现人机交互监视网元运行信息功能。
-
-##项目经验
-- 2014.03-2014.07
-  -  无线通信网管理系统
-  -  对整个通信网络系统的网元进行管理、配置、监视和调度。
-  -  负责做后台服务开发。
-
-- 2013.09-2013.12
-  -  GIS地图监视系统
-  -  基于电子地图、能接受并实时显示网元运行状态信息的系统
-  -  负责后台数据接口开发和前端显示效果开发。
-
-- 2012.09-2013.04
-  -  旅游垂直搜索网站的设计与实现
-  -  通过网络爬虫并检索获取旅游相关信息的搜索引擎网站。
-  -  负责前后台开发。
 
 
 1. Self introduction , Chinese & English
+English: name+age+ born in province+graduate school+sparetime(running&books)
+charactor(Dare to try, open mind, keen learner in every respect of IT )
++jobs(elong+china construction bank)
+
+Chinese:
+name+age+born+school+grade one :school learning+grade2 : intern in guangzhou+grade 3 in school write Thesis base on the intern works. 
+
 2. C java python lauguage
 3. data structure, design parttern
 4. project
@@ -59,3 +19,4 @@
     - craw the picture
     - voice control computer
 5. english conversation
+books :a young prince was called  hamlet,his father was killed and mather was taken both by his uncle, he know the truth from his father's ghost. he played mad to confuse everybody and spoke the nature of things, he want to revenge, but he can't. he persude his mather to be a good man, and help her kill the murderer.By accidently he  kill the Chancellor，so he have to be sent to England by his uncle, but the order to kill hamlet was also be sent to england. but hamlet found the order and fake it, and escape back to his country. but Chancellor's son come back, too. hamlet's uncle tell Chancellor's son the truth. and Encourage him to fight hamlet with a poison sword, and finally hamlet and his mather and uncle,  Chancellor's son ,they all died.
