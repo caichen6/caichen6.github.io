@@ -9,7 +9,16 @@ Chinese:
 name+age+born+school+grade one :school learning+grade2 : intern in guangzhou+grade 3 in school write Thesis base on the intern works. 
 
 2. C java python lauguage
-3. data structure, design parttern
+3. data structure, 
+4. design parttern
+    策略模式
+    工厂模式
+    单例模式
+    观察者模式
+    代理模式
+
+    面向对象
+    
 4. project
     - ssh
     - webgis
