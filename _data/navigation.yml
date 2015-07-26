@@ -5,7 +5,10 @@
   excerpt:
   image: tech.jpg
 
-
+- title: Life
+  url: /categories/life/
+  
+  
 - title: Project
   url: /categories/project/
   excerpt:
